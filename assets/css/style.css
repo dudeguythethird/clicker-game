@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;600&display=swap');
+
+/*---------------------------------------------Page Styles*/
+
+/*the following method for positioning my background image was taken from https://www.w3schools.com/html/html_images_background.asp*/
+body {
+    background-image: url(/assets/images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.page-1, .page-2 {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.inherit-height {
+    height: inherit;
+}
+
+
+
+/*---------------------------------------------1st page (Stuff Getter)*/
+
+.get-stuff {
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 30%;
+ width: 30%;
+ font-family: 'Oswald', sans-serif;
+ font-weight: 600;
+ font-size: 2.3rem;  
+ background-color: #F09000;
+ border-color: #F09000;
+ border-radius: 0.6rem;
+}
+
+.btn-primary:hover {
+    background-color: #b76200;
+    border-color: #b76200;
+}
+
+.btn-primary:focus {
+    background-color: #b76200;
+    border-color: #b76200;
+}
+
+.sps {
+    font-family: 'Oswald', sans-serif;
+ font-weight: 600;
+ font-size: 2rem;
+ text-align: center;
+}
+
+
+.total-stuff-div{
+    margin-top: 100px;
+    width: 70%;
+}
+
+.total-stuff-text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    width: 50%;
+    display: inline-block;
+}
+
+.total-stuff-amount {
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    float: right;
+    padding-right: 20px;
+    width: 50%;
+    border: 2px solid;
+    border-radius: 0.6rem;
+    margin-top: auto;
+    background-color: rgba(243, 241, 239, 0.5);
+}
+
+/*---------------------------------------------1st page (Spend Stuff)*/
+
+.shop-title-container {
+    height: 10%;
+}
+
+.attract-message {
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attract-message p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+}
+
+.height-90{
+    height: 95%;
+}
+
+.shop-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+.shop-item-container{
+    height: 80%;
+    /*This centering method was found here: https://css-tricks.com/centering-css-complete-guide/*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-item {
+   height: 50%;
+}
+
+.buy-text{
+    display: block;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 0.6rem;
+    background-color: rgba(243, 241, 239, 0.5);
+}
+
+.buy {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: center;
+    display: block;  
+}
+
+.buy-inactive{
+    background-color: grey;
+    border-color: grey;
+}
+
+.buy-active {
+    background-color: #F09000;
+    border-color: #F09000;
+}
+
+/*---------------------------------------------Page 2 (form)*/
+
+.contact-heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h5 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+}
+
+.form {
+    margin-top: auto;
+}
+
+/*---------------------------------------------Media Queries*/
+
+@media(max-width: 1200px){
+    .total-stuff-div{
+        width: 80%;
+        margin-top: 40px;
+    }
+    .total-stuff-amount {
+        font-size: 1.5rem;
+    }
+    .total-stuff-text {
+        font-size: 1.5rem;
+    }
+    .get-stuff{
+        width: 30%;
+        margin-top: 15%;
+    }
+    .on-screens {
+        height: 40%;
+    }
+    .on-screens-1 {
+        height: 60%;
+    }
+    .buy-text{
+        width: 70%;
+    }
+}
+
+@media(max-width: 576px){
+    .get-stuff{
+        width: 40%;
+        margin-top: 40px;
+        font-size: 1.5rem;
+    }
+    .sps {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .on-screens {
+        height: 30%;
+    }
+    .on-screens-1 {
+        height: 70%;
+    }
+    .buy-text{
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .total-stuff-amount {
+        font-size: 1rem;
+    }
+    .total-stuff-text {
+        font-size: 1rem;
+    }
+}
