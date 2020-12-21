@@ -23,7 +23,21 @@ body {
     height: inherit;
 }
 
+.btn-primary {
+    background-color: #F09000;
+    border-color: #F09000;
+    border-radius: 0.6rem;
+}
 
+.btn-primary:hover {
+    background-color: #b76200;
+    border-color: #b76200;
+}
+
+.btn-primary:focus {
+    background-color: #b76200;
+    border-color: #b76200;
+}
 
 /*---------------------------------------------1st page (Stuff Getter)*/
 
@@ -35,19 +49,6 @@ body {
  font-family: 'Oswald', sans-serif;
  font-weight: 600;
  font-size: 2.3rem;  
- background-color: #F09000;
- border-color: #F09000;
- border-radius: 0.6rem;
-}
-
-.btn-primary:hover {
-    background-color: #b76200;
-    border-color: #b76200;
-}
-
-.btn-primary:focus {
-    background-color: #b76200;
-    border-color: #b76200;
 }
 
 .sps {
@@ -172,7 +173,11 @@ h5 {
 }
 
 .form {
-    margin-top: auto;
+    margin-top: 20%;
+}
+
+.form-element {
+    margin-top: 20px;
 }
 
 /*---------------------------------------------Media Queries*/
