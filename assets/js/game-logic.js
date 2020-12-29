@@ -1,8 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
     var score = 0;
 
-    $(".get-stuff").click(function() {
-        score = score + 1;
-        $(".total-stuff-amount").text(score);
-    })
+    addToScore(1000)
+
+    function addToScore(amount) {
+        score = score + amount;
+        //document.getElementById("total-stuff-amount").innerHTML = score;
+        $("#total-stuff-amount").text(score);
+    }
+
+    $(".get-stuff").click(a)
 })

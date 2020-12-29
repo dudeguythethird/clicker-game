@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/game-logic.js"></script>
 
     <title>Stuff Getter</title>
 </head>
@@ -30,7 +31,7 @@
                 <div class="row no-gutters">
                     <div class="center total-stuff-div">
                         <span class="total-stuff-text">Total Stuff&nbsp;&nbsp;<i class="fas fa-cubes"></i>&nbsp;=</span>
-                        <span class="total-stuff-amount">0</span>
+                        <span id="total-stuff-amount">0</span>
                     </div>
                 </div>
             </div>
@@ -42,8 +43,8 @@
                 </div>
                 <div class="row no-gutters shop-item-container">
                     <div class="col-6 shop-item-1">
-                        <p class="center buy-text">Auto Stuff Getter<br>-&nbsp;50 Stuff&nbsp;-</p>
-                        <button type="button" class="btn btn-primary center buy buy-inactive">Buy</button>
+                        <p class="center buy-text">Auto Stuff Getter<br>-&nbsp;<span id="autocost">15</span> Stuff&nbsp;-</p>
+                        <button type="button" class="btn btn-primary center buy buy-inactive" id="auto-buy">Buy</button>
                     </div>
                     <div class="col-6 shop-item-2">
                         <p class="center buy-text">

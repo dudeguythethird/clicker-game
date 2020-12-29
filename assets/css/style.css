@@ -72,7 +72,7 @@ body {
     display: inline-block;
 }
 
-.total-stuff-amount {
+#total-stuff-amount {
     text-align: right;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
@@ -147,16 +147,13 @@ body {
     margin-top: 10px;
     text-align: center;
     display: block;  
+    background-color: #F09000;
+    border-color: #F09000;
 }
 
 .buy-inactive{
     background-color: grey;
     border-color: grey;
-}
-
-.buy-active {
-    background-color: #F09000;
-    border-color: #F09000;
 }
 
 /*---------------------------------------------Page 2 (form)*/
@@ -187,7 +184,7 @@ h5 {
         width: 80%;
         margin-top: 40px;
     }
-    .total-stuff-amount {
+    #total-stuff-amount {
         font-size: 1.5rem;
     }
     .total-stuff-text {
@@ -228,7 +225,7 @@ h5 {
         padding: 10px;
         font-size: 1rem;
     }
-    .total-stuff-amount {
+    #total-stuff-amount {
         font-size: 1rem;
     }
     .total-stuff-text {
