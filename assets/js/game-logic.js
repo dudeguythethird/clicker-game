@@ -20,7 +20,18 @@ $(document).ready(function () {
             $("#sps-value").text(stuffGetters);
         }
     }
+
+    setInterval(function(){
+    if (score >= stuffGetterCost) {
+        $("#auto-buy").removeClass("buy-inactive");
+    }}, 100);
+
+    setInterval(function(){
+    if (score <= stuffGetterCost) {
+        $("#auto-buy").addClass("buy-inactive");
+    }}, 100);
     
     $(".get-stuff").click(addToScore);
     $("#auto-buy").click(buyStuffGetter);
 })
+
