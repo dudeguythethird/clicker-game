@@ -44,12 +44,17 @@ body {
 .get-stuff {
  margin-left: auto;
  margin-right: auto;
- margin-top: 30%;
+ margin-top: 15%;
  width: 30%;
  font-family: 'Oswald', sans-serif;
  font-weight: 600;
  font-size: 2.3rem;  
+ /* The folloing transition property and the "hover" and "active" rules below that come from the clicker tutorial: https://www.youtube.com/watch?v=-EDJjOt2RlE&t=3s&ab_channel=TanktotGames*/
+ transition: all .2s ease-in-out;
 }
+
+.get-stuff:hover { transform: scale(1.10);}
+.get-stuff:active { transform: scale(0.99);}
 
 .sps {
     font-family: 'Oswald', sans-serif;
