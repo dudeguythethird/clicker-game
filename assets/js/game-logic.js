@@ -111,7 +111,24 @@ $(document).ready(function () {
         $("#bank-value").text(banks);
     };
 
+    setInterval(function() {
+            saveGame();
+        }, 30000) //30000ms = 30 seconds
 
+    document.addEventListener("keydown", function(event) {
+        if (event.ctrlKey && event.which == 83) { //"83" is a code that refers to the key "s", the codes says if the the keys "ctrl + s" are pressed.
+            event.preventDefault();
+            saveGame();
+        }
+    })
+
+    function resetGame() {
+        if (confirm("Are you sure you want to reset your game?")){
+            var gameSave = {}; 
+            localStorage.setItem("gameSave", JSON.stringify(gameSave)); //Creating and storing an empty save game.
+            location.reload();
+        }
+    }
 
     //Automatic Score Updating Function
     
@@ -123,10 +140,6 @@ $(document).ready(function () {
 
         document.title = score + " Stuff - Stuff Getter"
     }, 1000) //1000ms = 1 second
-
-    setInterval(function() {
-        saveGame();
-    }, 30000) //30000ms = 30 seconds
 
     //Shop Buy Button Active Status Toggles
 
@@ -169,4 +182,5 @@ $(document).ready(function () {
     $("#factory-buy").click(buyFactory);
     $("#bank-buy").click(buyBank);
     $(".save").click(saveGame);
+    $("#reset").click(resetGame);
 })
