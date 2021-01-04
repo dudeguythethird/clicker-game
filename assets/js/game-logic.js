@@ -195,6 +195,16 @@ $(document).ready(function () {
         $("#bank-buy").addClass("buy-inactive");
     }}, 100);
 
+    setInterval(function(){
+    if (score >= clickingPowerCost ) {
+        $("#click-power-buy").removeClass("buy-inactive");
+    }}, 100);
+
+    setInterval(function(){
+    if (score <= clickingPowerCost) {
+        $("#click-power-buy").addClass("buy-inactive");
+    }}, 100);
+
     //Click Event Handlers for Game
     
     $(".get-stuff").click(addToScore);
