@@ -85,6 +85,14 @@ For any scenarios that have not been automated, test the user stories manually a
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
+-->
+
+### Bugs
+
+* Bug discovered where number of factories was not loading from cookies. I eventually realised that, this was because I had ommited to add a line of code to get that value to save in the first place. Bug fixed by adding the required lines (both to the saveGame and loadGame functions).
+
+<!--
+
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.

@@ -36,7 +36,7 @@ $(document).ready(function () {
         if (score >= factoryCost) {
             score = score - factoryCost;
             factories = factories + 1;
-            factoryCost = Math.round(factoryCost * 1.15);
+            factoryCost = Math.round(factoryCost * 1.2);
             $("#total-stuff-amount").text(score);
             $("#factory-cost").text(factoryCost);
             $("#factory-value").text(factories);
@@ -48,7 +48,7 @@ $(document).ready(function () {
         if (score >= bankCost) {
             score = score - bankCost;
             banks = banks + 1;
-            bankCost = Math.round(bankCost * 1.15);
+            bankCost = Math.round(bankCost * 1.25);
             $("#total-stuff-amount").text(score);
             $("#bank-cost").text(bankCost);
             $("#bank-value").text(banks);
@@ -70,6 +70,49 @@ $(document).ready(function () {
         $("#sps-value").text(stuffPerSecond);
     }
 
+    //Save/Load Game Functions
+
+    function loadGame() {
+        var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+        // The following "if" functions check if a given value is stored in the gameSave object, before updating the working value to the one found in said object. This is in order to prevent errors, should it fail to find a value in the gameSave (perhaps due to a change you make to the code)
+        if (typeof savedGame.score !== "undefined") score = savedGame.score;
+        if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
+        if (typeof savedGame.stuffGetterCost !== "undefined") stuffGetterCost = savedGame.stuffGetterCost;
+        if (typeof savedGame.stuffGetters !== "undefined") stuffGetters = savedGame.stuffGetters;
+        if (typeof savedGame.factoryCost !== "undefined") factoryCost = savedGame.factoryCost;
+        if (typeof savedGame.factories !== "undefined") factories = savedGame.factories;
+        if (typeof savedGame.bankCost !== "undefined") bankCost = savedGame.bankCost;
+        if (typeof savedGame.banks !== "undefined") banks = savedGame.banks;
+    }
+
+    function saveGame() {
+        var gameSave = {
+            score: score,
+            clickingPower: clickingPower,
+            stuffGetterCost: stuffGetterCost,
+            stuffGetters: stuffGetters,
+            factoryCost: factoryCost,
+            factories: factories,
+            bankCost: bankCost,
+            banks: banks
+        };
+        localStorage.setItem("gameSave", JSON.stringify(gameSave));
+    }
+
+    window.onload = function(){
+        loadGame();
+        updateStuffPerSecond();
+        $("#total-stuff-amount").text(score);
+        $("#auto-cost").text(stuffGetterCost);
+        $("#stuff-getter-value").text(stuffGetters);
+        $("#factory-cost").text(factoryCost);
+        $("#factory-value").text(factories);
+        $("#bank-cost").text(bankCost);
+        $("#bank-value").text(banks);
+    };
+
+
+
     //Automatic Score Updating Function
     
     setInterval(function(){
@@ -80,6 +123,10 @@ $(document).ready(function () {
 
         document.title = score + " Stuff - Stuff Getter"
     }, 1000) //1000ms = 1 second
+
+    setInterval(function() {
+        saveGame();
+    }, 30000) //30000ms = 30 seconds
 
     //Shop Buy Button Active Status Toggles
 
@@ -121,4 +168,5 @@ $(document).ready(function () {
     $("#auto-buy").click(buyStuffGetter);
     $("#factory-buy").click(buyFactory);
     $("#bank-buy").click(buyBank);
+    $(".save").click(saveGame);
 })
