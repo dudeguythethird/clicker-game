@@ -2,12 +2,13 @@ $(document).ready(function () {
 
     //The core logic for this game came from the following youtube tutorial: https://www.youtube.com/watch?v=d-AbDEwpp6g&t=1161s&ab_channel=TanktotGames
 
-    //I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have simplified the addToScore function and included .click event handlers in this JS file (the tutorial shows inline code and uses onclick attributes for the relevant elements in the HTML).
+    //I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have simplified the addToScore function, added a buyClickingPower function and included .click event handlers in this JS file (the tutorial shows inline code and uses onclick attributes for the relevant elements in the HTML).
 
     //Basic Values
 
     var score = 0;
     var clickingPower = 1;
+    var clickingPowerCost = 100;
 
     //Shop Items and Costs
 
@@ -56,6 +57,19 @@ $(document).ready(function () {
         }
     }
 
+    function buyClickingPower() {
+        if (score >= clickingPowerCost) {
+            score = score - clickingPowerCost;
+            clickingPower = clickingPower * 3;
+            clickingPowerCost = Math.round(clickingPowerCost * 3);
+            clickingPowerNext = clickingPower * 3;
+            $("#total-stuff-amount").text(score)
+            $("#clicking-power-cost").text(clickingPowerCost);
+            $("#click-power-next").text(clickingPowerNext);
+            updateStuffPerSecond();
+        }
+    }
+
     //Clicking Functions
 
     function addToScore() {
@@ -77,6 +91,8 @@ $(document).ready(function () {
         // The following "if" functions check if a given value is stored in the gameSave object, before updating the working value to the one found in said object. This is in order to prevent errors, should it fail to find a value in the gameSave (perhaps due to a change you make to the code)
         if (typeof savedGame.score !== "undefined") score = savedGame.score;
         if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
+        if (typeof savedGame.clickingPowerCost !== "undefined") clickingPowerCost = savedGame.clickingPowerCost;
+        if (typeof savedGame.clickingPowerNext !== "undefined") clickingPowerNext = savedGame.clickingPowerNext;
         if (typeof savedGame.stuffGetterCost !== "undefined") stuffGetterCost = savedGame.stuffGetterCost;
         if (typeof savedGame.stuffGetters !== "undefined") stuffGetters = savedGame.stuffGetters;
         if (typeof savedGame.factoryCost !== "undefined") factoryCost = savedGame.factoryCost;
@@ -89,6 +105,8 @@ $(document).ready(function () {
         var gameSave = {
             score: score,
             clickingPower: clickingPower,
+            clickingPowerCost: clickingPowerCost,
+            clickingPowerNext: clickingPowerNext,
             stuffGetterCost: stuffGetterCost,
             stuffGetters: stuffGetters,
             factoryCost: factoryCost,
@@ -105,6 +123,8 @@ $(document).ready(function () {
         $("#total-stuff-amount").text(score);
         $("#auto-cost").text(stuffGetterCost);
         $("#stuff-getter-value").text(stuffGetters);
+        $("#click-power-next").text(clickingPowerNext);
+        $("#clicking-power-cost").text(clickingPowerCost);
         $("#factory-cost").text(factoryCost);
         $("#factory-value").text(factories);
         $("#bank-cost").text(bankCost);
@@ -183,4 +203,5 @@ $(document).ready(function () {
     $("#bank-buy").click(buyBank);
     $(".save").click(saveGame);
     $("#reset").click(resetGame);
+    $("#click-power-buy").click(buyClickingPower);
 })
