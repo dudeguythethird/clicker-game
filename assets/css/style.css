@@ -59,7 +59,7 @@ body {
 .sps {
     font-family: 'Oswald', sans-serif;
  font-weight: 600;
- font-size: 2rem;
+ font-size: 1.8rem;
  text-align: center;
 }
 
@@ -117,9 +117,8 @@ body {
     font-weight: 600;
     text-align: center;
     padding-top: 10px;
+    color: whitesmoke;
 }
-
-
 
 .shop-item-container{
     height: 80%;
@@ -139,7 +138,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    padding: 10px;
     border: 2px solid black;
     border-radius: 0.6rem;
     background-color: rgba(243, 241, 239, 0.5);
@@ -194,6 +192,46 @@ h5 {
     margin-top: 20px;
 }
 
+/*---------------------------------------------Page 2 (footer)*/
+
+.page-2 {
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid;
+    padding-top: 25px;
+    background-color: rgba(243, 241, 239, 0.5);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.socialmedia {
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.socialmedia a {
+    color: #F09000;
+}
+
+a:hover {
+    color: #b76200;
+}
+
+a:focus {
+    color: #b76200;
+}
+
 /*---------------------------------------------Media Queries*/
 
 @media(max-width: 1200px){
@@ -220,6 +258,7 @@ h5 {
     .shop-title h2 {
         margin-top: 15px;
         font-size: 2.2rem;
+        color: black;
     }
     .buy-text{
         width: 70%;
@@ -231,29 +270,68 @@ h5 {
 }
 
 @media(max-width: 576px){
-    .get-stuff{
-        width: 40%;
-        margin-top: 40px;
-        font-size: 1.5rem;
-    }
-    .sps {
-        font-size: 1.5rem;
-        margin: 0;
-    }
+    /*------------------------------------------General*/
     .on-screens {
         height: 30%;
     }
     .on-screens-1 {
         height: 70%;
     }
-    .buy-text{
-        padding: 10px;
+    /*------------------------------------------Get stuff section*/
+    .get-stuff{
+        width: 40%;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        margin-left: 30%;
+        margin-bottom: 7px;
+    }
+    .sps {
         font-size: 1rem;
+        margin: 0;
+    }
+    .save {
+        font-size: 1.2rem;
     }
     #total-stuff-amount {
         font-size: 1rem;
     }
     .total-stuff-text {
+        font-size: 1rem;
+    }
+
+    /*------------------------------------------Spend stuff section*/
+    .shop-title h2 {
+        margin-top: 15px;
+        font-size: 1.5rem;
+        color: black;
+    }
+    .total-stuff-div {
+        margin-top: 5px;
+    }
+    .shop-item p {
+        font-size: 1rem;
+    }
+    .buy-text{
+        padding: 5px;
+        width: 98%;
+        margin-top: 10px;
+    }
+    .buy-text2 {
+        margin-top: 30px;
+    }
+    .buy-text3 {
+        margin-top: 40px;
+    }
+    .buy {
+        font-size: 1rem;
+        margin-top: 1px;
+    }
+/*------------------------------------------Footer*/
+    .socialmedia {
+    font-size: 1.5rem;
+    }
+
+    .copyright{
         font-size: 1rem;
     }
 }
