@@ -11,7 +11,7 @@ function sendMail(contactForm) {
         },
         function(error){
             console.log("FAILED", error);
-            alert("Error submitting idea, please try again later")
+            alert("Error submitting idea, please try again later");
         }
     );
     return false;

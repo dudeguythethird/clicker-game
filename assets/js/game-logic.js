@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     //Basic Values
 
-    var score = 0;
+    var score = 1000000000;
     var clickingPower = 1;
     var clickingPowerCost = 100;
 
@@ -18,6 +18,7 @@ $(document).ready(function () {
     var factories = 0;
     var bankCost = 1000;
     var banks = 0;
+    var gameVictoryCost = 1000000000;
 
     //Shop Item Functions
 
@@ -63,10 +64,18 @@ $(document).ready(function () {
             clickingPower = clickingPower * 3;
             clickingPowerCost = Math.round(clickingPowerCost * 3);
             clickingPowerNext = clickingPower * 3;
-            $("#total-stuff-amount").text(score)
+            $("#total-stuff-amount").text(score);
             $("#clicking-power-cost").text(clickingPowerCost);
             $("#click-power-next").text(clickingPowerNext);
             updateStuffPerSecond();
+        }
+    }
+
+    function buyGameVictory() {
+        if (score >= gameVictoryCost) {
+            score = score - gameVictoryCost;
+            alert("You have won the game! Please feel a sense of acomplishement. Also, feel free to keep getting more stuff.");
+            $("#total-stuff-amount").text(score);
         }
     }
 
@@ -205,6 +214,16 @@ $(document).ready(function () {
         $("#click-power-buy").addClass("buy-inactive");
     }}, 100);
 
+    setInterval(function(){
+    if (score >= gameVictoryCost ) {
+        $("#victory-buy").removeClass("buy-inactive");
+    }}, 100);
+
+    setInterval(function(){
+    if (score <= gameVictoryCost) {
+        $("#victory-buy").addClass("buy-inactive");
+    }}, 100);
+
     //Click Event Handlers for Game
     
     $(".get-stuff").click(addToScore);
@@ -214,4 +233,5 @@ $(document).ready(function () {
     $(".save").click(saveGame);
     $("#reset").click(resetGame);
     $("#click-power-buy").click(buyClickingPower);
+    $("#victory-buy").click(buyGameVictory);
 })
