@@ -42,9 +42,9 @@ body {
 /*---------------------------------------------1st page (Stuff Getter)*/
 
 .get-stuff {
- margin-left: auto;
- margin-right: auto;
+ margin-left: 35%;
  margin-top: 5%;
+ margin-bottom: 40px;
  width: 30%;
  font-family: 'Oswald', sans-serif;
  font-weight: 600;
@@ -130,7 +130,7 @@ body {
 }
 
 .shop-item {
-   height: 50%;
+   height: 30%;
 }
 
 .buy-text{
@@ -139,7 +139,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    padding: 30px;
+    padding: 10px;
     border: 2px solid black;
     border-radius: 0.6rem;
     background-color: rgba(243, 241, 239, 0.5);
@@ -187,7 +187,7 @@ h5 {
 }
 
 .form {
-    margin-top: 20%;
+    margin-top: 7%;
 }
 
 .form-element {
@@ -209,7 +209,7 @@ h5 {
     }
     .get-stuff{
         width: 30%;
-        margin-top: 15%;
+        margin-top: 2.5%;
     }
     .on-screens {
         height: 40%;
@@ -217,8 +217,16 @@ h5 {
     .on-screens-1 {
         height: 60%;
     }
+    .shop-title h2 {
+        margin-top: 15px;
+        font-size: 2.2rem;
+    }
     .buy-text{
         width: 70%;
+        margin-top: 20px;
+    }
+    .shop-item p {
+        font-size: 1.3rem;
     }
 }
 
