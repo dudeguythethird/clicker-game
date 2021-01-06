@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     //Basic Values
 
-    var score = 1000000000;
+    var score = 0;
     var clickingPower = 1;
     var clickingPowerCost = 100;
 

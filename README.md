@@ -1,6 +1,6 @@
 # Stuff Getter
 
-This project (LINK) is a simple clicker/ incremental game (in the style of *Cookie Clicker* or *Tap Tycoon*). Its main aim is to provide a fun experience of interactive growth for the player. It must achieve this with only HTML, CSS, and Javascript (JQuery). 
+This [project](https://github.com/dudeguythethird/clicker-game) is a simple clicker/ incremental game (in the style of *Cookie Clicker* or *Tap Tycoon*). Its main aim is to provide a fun experience of interactive growth for the player. It must achieve this with only HTML, CSS, and Javascript (JQuery). 
 
 A clicker/ incremental game is a genre in which, initially, the only avenue for interactivity offered to the player is to simply click, either a button or anywhere on the screen. Doing this accrues a resource. Different iterations of the genre choose different resources, usually for thematic reasons. *Adventure Capitalist* has dollars, *Adventure Communist* has potatoes, *Cookie Clicker* has… well... cookies. The conceit of these games is their simplicity, which almost always builds into ludicrous levels of complexity. As the games go on, they offer the player various items that they can buy with their accrued resources. These, usually, will allow the gathering of further resources. The amount of resources the player has will increase exponentially. 
 
