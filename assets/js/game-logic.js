@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     //The core logic for this game came from the following youtube tutorial: https://www.youtube.com/watch?v=d-AbDEwpp6g&t=1161s&ab_channel=TanktotGames
 
-    //I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have simplified the addToScore function, added a buyClickingPower function and included .click event handlers in this JS file (the tutorial shows inline code and uses onclick attributes for the relevant elements in the HTML).
+    //I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have simplified the addToScore function, added a buyClickingPower function, added a buyGameVictory function, and included .click event handlers in this JS file (the tutorial shows JS included in between script tags in the main HTML file and uses onclick attributes for the relevant elements in said HTML).
 
     //Basic Values
 
@@ -175,7 +175,7 @@ $(document).ready(function () {
     //I learnt the following methods here: https://stackoverflow.com/questions/2170923/whats-the-easiest-way-to-call-a-function-every-5-seconds-in-jquery
 
     setInterval(function(){
-    if (score >= stuffGetterCost ) {
+    if (score >= stuffGetterCost) {
         $("#auto-buy").removeClass("buy-inactive");
     }}, 100);
 
