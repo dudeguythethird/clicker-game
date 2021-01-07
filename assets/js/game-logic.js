@@ -161,10 +161,6 @@ $(document).ready(function () {
         $("#bank-value").text(banks);
     };
 
-    setInterval(function () {
-        saveGame();
-    }, 30000) //30000ms = 30 seconds
-
     document.addEventListener("keydown", function (event) {
         if (event.ctrlKey && event.which == 83) { //"83" is a code that refers to the key "s", the codes says if the the keys "ctrl + s" are pressed.
             event.preventDefault();
@@ -180,80 +176,53 @@ $(document).ready(function () {
         }
     }
 
-    //Automatic Score Updating Function
+   
+    setInterval(function () { 
+        
+        //Automatic Score Updating Function
 
-    setInterval(function () {
         score = score + stuffGetters;
         score = score + factories * ENTITY_MULTIPLIER.factory;
         score = score + banks * ENTITY_MULTIPLIER.bank;
         $("#total-stuff-amount").text(score);
 
-        document.title = score + " Stuff - Stuff Getter"
-    }, 1000) //1000ms = 1 second
+        saveGame();
 
-    //Shop Buy Button Active Status Toggles
+        //Shop Buy Button Active Status Toggles
 
-    //I learnt the following methods here: https://stackoverflow.com/questions/2170923/whats-the-easiest-way-to-call-a-function-every-5-seconds-in-jquery
-
-    setInterval(function () {
         if (score >= stuffGetterCost) {
             $("#auto-buy").removeClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score <= stuffGetterCost) {
             $("#auto-buy").addClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score >= factoryCost) {
             $("#factory-buy").removeClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score <= factoryCost) {
             $("#factory-buy").addClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score >= bankCost) {
             $("#bank-buy").removeClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score <= bankCost) {
             $("#bank-buy").addClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score >= clickingPowerCost) {
             $("#click-power-buy").removeClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score <= clickingPowerCost) {
             $("#click-power-buy").addClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score >= gameVictoryCost) {
             $("#victory-buy").removeClass("buy-inactive");
         }
-    }, 100);
-
-    setInterval(function () {
         if (score <= gameVictoryCost) {
             $("#victory-buy").addClass("buy-inactive");
         }
-    }, 100);
+
+        document.title = score + " Stuff - Stuff Getter"
+    }, 1000) //1000ms = 1 second
 
     //Click Event Handlers for Game
 

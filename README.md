@@ -236,10 +236,14 @@ In particular, you should provide all details of the differences between the dep
 - Separate git branch?
 
 In addition, if it is not obvious, you should also describe how to run your code locally.
+--->
 
 
 ## Credits
 
+* [This](https://stackoverflow.com/questions/2170923/whats-the-easiest-way-to-call-a-function-every-5-seconds-in-jquery) thread helped me understand how I could automatcally update classes on my buy buttons.
+
+<!---
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
