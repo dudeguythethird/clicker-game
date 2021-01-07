@@ -4,7 +4,7 @@
 
 /*the following method for positioning my background image was taken from https://www.w3schools.com/html/html_images_background.asp*/
 body {
-    background-image: url(/assets/images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
