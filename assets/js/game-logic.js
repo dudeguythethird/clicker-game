@@ -2,6 +2,15 @@
 
 //I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have simplified the addToScore function, added a buyClickingPower function, added a buyGameVictory function, stored key values in value maps at the beggining of the code for easy maintainability, and included .click event handlers in this JS file (the tutorial shows JS included in between script tags in the main HTML file and uses onclick attributes for the relevant elements in said HTML).
 
+var START_VALUES = {
+    score: 0,
+    clickingPower: 1,
+    clickingPowerNext: 3,
+    stuffGetters: 0,
+    factories: 0,
+    banks: 0
+}
+
 var COST_MAP = {
     getter: 15,
     factory: 100,
@@ -26,19 +35,19 @@ var PRICE_SCALING = {
 $(document).ready(function () {
 
     //Basic Values
-    var score = 0;
-    var clickingPower = 1;
+    var score = START_VALUES.score;
+    var clickingPower = START_VALUES.clickingPower;
     var clickingPowerCost = COST_MAP.clickingPower;
-    var clickingPowerNext = 3;
+    var clickingPowerNext = START_VALUES.clickingPowerNext;
 
     //Shop Items and Costs
 
     var stuffGetterCost = COST_MAP.getter;
-    var stuffGetters = 0;
+    var stuffGetters = START_VALUES.stuffGetters;
     var factoryCost = COST_MAP.factory;
-    var factories = 0;
+    var factories = START_VALUES.factories;
     var bankCost = COST_MAP.bank;
-    var banks = 0;
+    var banks = START_VALUES.banks;
     var gameVictoryCost = COST_MAP.victory;
 
     //Shop Item Functions
@@ -176,7 +185,10 @@ $(document).ready(function () {
         }
     }
 
-   
+    setInterval(function(){
+        saveGame();
+    }, 3000)
+    
     setInterval(function () { 
         
         //Automatic Score Updating Function
@@ -185,8 +197,6 @@ $(document).ready(function () {
         score = score + factories * ENTITY_MULTIPLIER.factory;
         score = score + banks * ENTITY_MULTIPLIER.bank;
         $("#total-stuff-amount").text(score);
-
-        saveGame();
 
         //Shop Buy Button Active Status Toggles
 
