@@ -28,11 +28,11 @@
 <body>
     <!---Html is split into 2 sections, one for each "page", the game is one the first, the contact form on the second. The first is styled so its height is always the same as your screen height, minimum.-->
     <section class="page-1">
-        <div class="row no-gutters height-90">
+        <div class="row no-gutters">
             <div class="col-12 col-xl-6 on-screens">
+                <h2 class="your-stuff-title">Your Stuff&nbsp;&nbsp; <i class="fas fa-arrow-down"></i></h2>
                 <div class="row no-gutters">
-                    <div class="col-12"><button type="button" class="btn btn-primary get-stuff">Get Stuff <i
-                                class="fas fa-cubes"></i></button></div>
+
                     <div class="col-6">
                         <p class="sps">Stuff per second = <span id="sps-value">0</span></p>
                     </div>
@@ -48,14 +48,19 @@
                     <button type="button" class="btn btn-primary center save" id="save">Save</button>
                     <button type="button" class="btn btn-primary center save" id="reset">Reset</button>
                 </div>
+
                 <div class="row no-gutters">
                     <div class="center total-stuff-div">
                         <span class="total-stuff-text">Total Stuff&nbsp;&nbsp;<i class="fas fa-cubes"></i>&nbsp;=</span>
                         <span id="total-stuff-amount">0</span>
                     </div>
                 </div>
+                <div class="col-12 get-stuff-container d-xl-none"><button type="button"
+                        class="btn btn-primary get-stuff">Get
+                        Stuff <i class="fas fa-cubes"></i></button></div>
+
             </div>
-            <div class="col-12 col-xl-6 height-90 on-screens-1">
+            <div class="col-12 col-xl-6 on-screens-1">
                 <div class="row no-gutters shop-title-container">
                     <div class="col-12 shop-title">
                         <h2>Spend Stuff&nbsp;&nbsp; <i class="fas fa-arrow-down"></i></h2>
@@ -69,7 +74,7 @@
                     </div>
                     <div class="col-6 shop-item">
                         <p class="center buy-text">
-                            Stuff Creating Factory <i class="fas fa-industry"></i><br>-&nbsp;<span
+                            Stuff <span class="d-none d-sm-inline">Creating</span> Factory <i class="fas fa-industry"></i><br>-&nbsp;<span
                                 id="factory-cost">100</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-</p>
                         <button type="button" class="btn btn-primary center buy buy-inactive"
                             id="factory-buy">Buy</button>
@@ -83,21 +88,40 @@
                     </div>
                     <div class="col-6 shop-item">
                         <p class="center buy-text buy-text2">
-                            Stuff Investment Bank <i class="fas fa-university"></i><br>-&nbsp;<span
+                            Stuff <span class="d-none d-sm-inline">Investment</span> Bank <i class="fas fa-university"></i><br>-&nbsp;<span
                                 id="bank-cost">1000</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-</p>
                         <button type="button" class="btn btn-primary center buy buy-inactive" id="bank-buy">Buy</button>
                     </div>
-                    <div class="col-6 shop-item">
-                        <p class="center buy-text buy-text2 buy-text3">
-                            Victory! <i class="fas fa-trophy"></i><br>-&nbsp;1 Billion Stuff&nbsp;<i
-                                class="fas fa-cubes"></i>-</p>
-                        <button type="button" class="btn btn-primary center buy buy-inactive" id="victory-buy">Buy</button>
+
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="d-none d-xl-block col-xl-4">
+                </div>
+                <div class="d-none d-xl-block col-xl-4">
+                    <div class="col-12 get-stuff-container d-xl-block"><button type="button"
+                            class="btn btn-primary get-stuff">Get
+                            Stuff <i class="fas fa-cubes"></i></button></div>
+                </div>
+                <div class="d-none d-xl-block col-xl-1"></div>
+                <div class="col-12 col-xl-3 shop-item">
+                    <div class="row">
+                        <div class="col-8 col-md-12 buy-text3">
+                            <p class="center buy-text buy-text2">
+                                Victory! <i class="fas fa-trophy"></i><br>-&nbsp;1 Billion Stuff&nbsp;<i
+                                    class="fas fa-cubes"></i>-</p>
+                        </div>
+                        <div class="col-4 col-md-12 v-buy-container">
+                            <div class="v-buy"><button type="button" class="btn btn-primary center buy buy-inactive"
+                                id="victory-buy">Buy</button></div>
+                        </div>
                     </div>
                 </div>
-
             </div>
-            <div class="attract-message">
-                <p>Want to suggest a new feature? &nbsp;&nbsp; <i class="fas fa-arrow-down"></i></p>
+            <div class="row no-gutters attract-message-container">
+                <div class="attract-message">
+                    <p>Want to suggest a new feature? &nbsp;&nbsp; <i class="fas fa-arrow-down"></i></p>
+                </div>
             </div>
         </div>
 
@@ -128,7 +152,6 @@
                                     </button>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -144,7 +167,8 @@
                     <p class="socialmedia">
                         <a href="https://github.com/dudeguythethird" target="_blank"><i class="fab fa-github"></i></a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://www.linkedin.com/in/joseph-keable-9738bb149/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/joseph-keable-9738bb149/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="https://twitter.com/JosephKeable" target="_blank"><i class="fab fa-twitter"></i></a>
                     </p>
