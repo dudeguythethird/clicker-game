@@ -1,25 +1,45 @@
+//The core logic for this game came from the following youtube tutorial: https://www.youtube.com/watch?v=d-AbDEwpp6g&t=1161s&ab_channel=TanktotGames
+
+//I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have simplified the addToScore function, added a buyClickingPower function, added a buyGameVictory function, stored key values in value maps at the beggining of the code for easy maintainability, and included .click event handlers in this JS file (the tutorial shows JS included in between script tags in the main HTML file and uses onclick attributes for the relevant elements in said HTML).
+
+var COST_MAP = {
+    getter: 15,
+    factory: 100,
+    bank: 1000,
+    clickingPower: 100,
+    victory: 1000000000
+};
+
+var ENTITY_MULTIPLIER = {
+    factory: 5,
+    bank: 70,
+    clickingPower: 3
+};
+
+var PRICE_SCALING = {
+    getter: 1.5,
+    factory: 1.2,
+    bank: 1.25,
+    clickingPower: 3
+};
+
 $(document).ready(function () {
 
-    //The core logic for this game came from the following youtube tutorial: https://www.youtube.com/watch?v=d-AbDEwpp6g&t=1161s&ab_channel=TanktotGames
-
-    //I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have simplified the addToScore function, added a buyClickingPower function, added a buyGameVictory function, and included .click event handlers in this JS file (the tutorial shows JS included in between script tags in the main HTML file and uses onclick attributes for the relevant elements in said HTML).
-
     //Basic Values
-
     var score = 0;
     var clickingPower = 1;
-    var clickingPowerCost = 100;
+    var clickingPowerCost = COST_MAP.clickingPower;
     var clickingPowerNext = 3;
 
     //Shop Items and Costs
 
-    var stuffGetterCost = 15;
+    var stuffGetterCost = COST_MAP.getter;
     var stuffGetters = 0;
-    var factoryCost = 100;
+    var factoryCost = COST_MAP.factory;
     var factories = 0;
-    var bankCost = 1000;
+    var bankCost = COST_MAP.bank;
     var banks = 0;
-    var gameVictoryCost = 1000000000;
+    var gameVictoryCost = COST_MAP.victory;
 
     //Shop Item Functions
 
@@ -62,9 +82,9 @@ $(document).ready(function () {
     function buyClickingPower() {
         if (score >= clickingPowerCost) {
             score = score - clickingPowerCost;
-            clickingPower = clickingPower * 3;
-            clickingPowerCost = Math.round(clickingPowerCost * 3);
-            clickingPowerNext = clickingPower * 3;
+            clickingPower = clickingPower * ENTITY_MULTIPLIER.clickingPower;
+            clickingPowerCost = Math.round(clickingPowerCost * PRICE_SCALING.clickingPower);
+            clickingPowerNext = clickingPower * ENTITY_MULTIPLIER.clickingPower;
             $("#total-stuff-amount").text(score);
             $("#clicking-power-cost").text(clickingPowerCost);
             $("#click-power-next").text(clickingPowerNext);
@@ -83,14 +103,14 @@ $(document).ready(function () {
     //Clicking Functions
 
     function addToScore() {
-            score= score + clickingPower;
-            $("#total-stuff-amount").text(score);
-        }
-    
+        score = score + clickingPower;
+        $("#total-stuff-amount").text(score);
+    }
+
     //Total Stuff Per Second Function
 
-    function updateStuffPerSecond(){
-        stuffPerSecond = stuffGetters + factories * 5 + banks * 70;
+    function updateStuffPerSecond() {
+        stuffPerSecond = stuffGetters + factories * ENTITY_MULTIPLIER.factory + banks * ENTITY_MULTIPLIER.bank;
         $("#sps-value").text(stuffPerSecond);
     }
 
@@ -113,21 +133,21 @@ $(document).ready(function () {
 
     function saveGame() {
         var gameSave = {
-            score: score,
-            clickingPower: clickingPower,
-            clickingPowerCost: clickingPowerCost,
-            clickingPowerNext: clickingPowerNext,
-            stuffGetterCost: stuffGetterCost,
-            stuffGetters: stuffGetters,
-            factoryCost: factoryCost,
-            factories: factories,
-            bankCost: bankCost,
-            banks: banks
+            score,
+            clickingPower,
+            clickingPowerCost,
+            clickingPowerNext,
+            stuffGetterCost,
+            stuffGetters,
+            factoryCost,
+            factories,
+            bankCost,
+            banks
         };
         localStorage.setItem("gameSave", JSON.stringify(gameSave));
     }
 
-    window.onload = function(){
+    window.onload = function () {
         loadGame();
         updateStuffPerSecond();
         $("#total-stuff-amount").text(score);
@@ -141,11 +161,11 @@ $(document).ready(function () {
         $("#bank-value").text(banks);
     };
 
-    setInterval(function() {
-            saveGame();
-        }, 30000) //30000ms = 30 seconds
+    setInterval(function () {
+        saveGame();
+    }, 30000) //30000ms = 30 seconds
 
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("keydown", function (event) {
         if (event.ctrlKey && event.which == 83) { //"83" is a code that refers to the key "s", the codes says if the the keys "ctrl + s" are pressed.
             event.preventDefault();
             saveGame();
@@ -153,19 +173,19 @@ $(document).ready(function () {
     })
 
     function resetGame() {
-        if (confirm("Are you sure you want to reset your game?")){
-            var gameSave = {}; 
+        if (confirm("Are you sure you want to reset your game?")) {
+            var gameSave = {};
             localStorage.setItem("gameSave", JSON.stringify(gameSave)); //Creating and storing an empty save game.
             location.reload();
         }
     }
 
     //Automatic Score Updating Function
-    
-    setInterval(function(){
+
+    setInterval(function () {
         score = score + stuffGetters;
-        score = score + factories * 5;
-        score = score + banks * 70;
+        score = score + factories * ENTITY_MULTIPLIER.factory;
+        score = score + banks * ENTITY_MULTIPLIER.bank;
         $("#total-stuff-amount").text(score);
 
         document.title = score + " Stuff - Stuff Getter"
@@ -175,58 +195,68 @@ $(document).ready(function () {
 
     //I learnt the following methods here: https://stackoverflow.com/questions/2170923/whats-the-easiest-way-to-call-a-function-every-5-seconds-in-jquery
 
-    setInterval(function(){
-    if (score >= stuffGetterCost) {
-        $("#auto-buy").removeClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score >= stuffGetterCost) {
+            $("#auto-buy").removeClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score <= stuffGetterCost) {
-        $("#auto-buy").addClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score <= stuffGetterCost) {
+            $("#auto-buy").addClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score >= factoryCost ) {
-        $("#factory-buy").removeClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score >= factoryCost) {
+            $("#factory-buy").removeClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score <= factoryCost) {
-        $("#factory-buy").addClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score <= factoryCost) {
+            $("#factory-buy").addClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score >= bankCost ) {
-        $("#bank-buy").removeClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score >= bankCost) {
+            $("#bank-buy").removeClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score <= bankCost) {
-        $("#bank-buy").addClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score <= bankCost) {
+            $("#bank-buy").addClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score >= clickingPowerCost ) {
-        $("#click-power-buy").removeClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score >= clickingPowerCost) {
+            $("#click-power-buy").removeClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score <= clickingPowerCost) {
-        $("#click-power-buy").addClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score <= clickingPowerCost) {
+            $("#click-power-buy").addClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score >= gameVictoryCost ) {
-        $("#victory-buy").removeClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score >= gameVictoryCost) {
+            $("#victory-buy").removeClass("buy-inactive");
+        }
+    }, 100);
 
-    setInterval(function(){
-    if (score <= gameVictoryCost) {
-        $("#victory-buy").addClass("buy-inactive");
-    }}, 100);
+    setInterval(function () {
+        if (score <= gameVictoryCost) {
+            $("#victory-buy").addClass("buy-inactive");
+        }
+    }, 100);
 
     //Click Event Handlers for Game
-    
+
     $(".get-stuff").click(addToScore);
     $("#auto-buy").click(buyStuffGetter);
     $("#factory-buy").click(buyFactory);
