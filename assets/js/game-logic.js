@@ -9,6 +9,7 @@ $(document).ready(function () {
     var score = 0;
     var clickingPower = 1;
     var clickingPowerCost = 100;
+    var clickingPowerNext = 3;
 
     //Shop Items and Costs
 
@@ -230,7 +231,7 @@ $(document).ready(function () {
     $("#auto-buy").click(buyStuffGetter);
     $("#factory-buy").click(buyFactory);
     $("#bank-buy").click(buyBank);
-    $(".save").click(saveGame);
+    $("#save").click(saveGame);
     $("#reset").click(resetGame);
     $("#click-power-buy").click(buyClickingPower);
     $("#victory-buy").click(buyGameVictory);
