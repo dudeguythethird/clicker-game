@@ -45,6 +45,39 @@ body {
     border-color: #b76200;
 }
 
+/*---------------------------------------------Header*/
+
+header {
+    padding: 10px 10px 5px 10px;
+    background-color: rgba(243, 241, 239, 0.5);
+    border-bottom: 2px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    float: top left;
+    display: inline;
+}
+
+.how-to {
+    float: right;
+    display: inline;
+    border: #20529B 3px solid;
+    font-family: 'Oswald', sans-serif;
+}
+
+.modal-title {
+    font-family: 'Oswald', sans-serif;
+}
+
+.modal-body {
+    font-family: 'Lato', sans-serif;
+}
+
 /*---------------------------------------------1st page (Stuff Getter)*/
 
 .get-stuff-container {
@@ -59,6 +92,7 @@ body {
     font-size: 2.3rem;  
     /* The folloing transition property and the "hover" and "active" rules below that come from the clicker tutorial: https://www.youtube.com/watch?v=-EDJjOt2RlE&t=3s&ab_channel=TanktotGames*/
     transition: all .2s ease-in-out;
+    border: #20529B 5px solid;
 }
 
 .get-stuff:hover { transform: scale(1.10);}
@@ -253,7 +287,8 @@ a:focus {
     }
     .get-stuff{
         width: 30%;
-        margin-top: 2.5%;
+        margin-top: 7px;
+        padding: 10px;
     }
     .on-screens {
         height: 40%;
@@ -262,16 +297,16 @@ a:focus {
         height: 60%;
     }
     .shop-title h2 {
-        margin-top: 15px;
-        font-size: 2.2rem;
+        margin-top: 5px;
+        font-size: 2rem;
         color: black;
     }
     .buy-text{
         width: 70%;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .shop-item p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .page-1{
     display: flex;
@@ -287,6 +322,9 @@ a:focus {
     }
     .on-screens-1 {
         height: 70%;
+    }
+    header {
+        padding-top: 2px;
     }
     /*------------------------------------------Get stuff section*/
     .get-stuff{
@@ -359,6 +397,9 @@ a:focus {
 }
 
 @media(max-width: 350px){
+    header{
+        display: none !important;
+    }
     .buy {
         font-size: 0.9rem;
     }
@@ -379,5 +420,8 @@ a:focus {
     }
     .page-1 {
         display: block;
+    }
+    .form-element {
+        margin-top: 10px;
     }
 }
