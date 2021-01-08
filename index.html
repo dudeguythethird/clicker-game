@@ -32,7 +32,8 @@
         <header>
             <h3 class="title">Stuff Getter <span class="d-none d-md-inline">- a stuff getting game.</span></h3>
 
-            <button type="button" class="btn btn-primary how-to" data-bs-toggle="modal" data-bs-target="#exampleModal">How to play</button>
+            <button type="button" class="btn btn-primary how-to" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">How to play</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -44,11 +45,22 @@
                         </div>
                         <div class="modal-body">
                             <p>
-                                Hi, welcome to Stuff Getter. As the name suggests, this is a game about getting stuff. To get started, all you need to do is click, or tap, "Get Stuff". The more you click the more you get and your total stuff will be recorded in the "Total Stuff" box, above the "Get Stuff" button. What's the point of getting stuff you may be wondering? Well, to spend that stuff on items of course!
+                                Hi, welcome to Stuff Getter. As the name suggests, this is a game about getting stuff.
+                                To get started, all you need to do is click, or tap, "Get Stuff". The more you click the
+                                more you get and your total stuff will be recorded in the "Total Stuff" box, above the
+                                "Get Stuff" button. What's the point of getting stuff you may be wondering? Well, to
+                                spend that stuff on items of course!
                             </p>
                             <p>
-                                As you can probably see, there is a spend stuff section. There, you can spend your hard earned stuff on new and exciting stuff getting technologies. You get stuff to spend it on items that enable you to get even more stuff. How much stuff can you get?
-                                Try to get a billion stuff and buy your way to victory! (I have not done maths on how long this might take to achieve. It could be a very long time.)
+                                As you can probably see, there is a spend stuff section. There, you can spend your hard
+                                earned stuff on new and exciting stuff getting technologies. You get stuff to spend it
+                                on items that enable you to get even more stuff. You will notice that the more of an
+                                item you buy, the more expensive it becomes. How much stuff can you get?
+                                Try to get a billion stuff and buy your way to victory! (I have not done maths on how
+                                long this might take to achieve. It could be a very long time...) Don't worry about
+                                achieving this goal too much, all you need to do is get stuff and enjoy watching the
+                                numbers go up. You can leave the game running in your browser while you do other things,
+                                passively earning you stuff.
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -99,32 +111,34 @@
                 <div class="row no-gutters shop-item-container">
                     <div class="col-6 shop-item">
                         <p class="center buy-text">Auto Stuff Getter <i class="fas fa-magic"></i><br>-&nbsp;<span
-                                id="auto-cost">15</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-</p>
-                        <button type="button" class="btn btn-primary center buy buy-inactive" id="auto-buy">Buy</button>
+                                id="auto-cost">15</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-<button type="button"
+                                class="btn btn-primary center buy buy-inactive" id="auto-buy">Buy</button></p>
                     </div>
                     <div class="col-6 shop-item">
                         <p class="center buy-text">
                             Stuff <span class="d-none d-sm-inline">Creating</span> Factory <i
                                 class="fas fa-industry"></i><br>-&nbsp;<span id="factory-cost">100</span> Stuff&nbsp;<i
-                                class="fas fa-cubes"></i>-</p>
-                        <button type="button" class="btn btn-primary center buy buy-inactive"
-                            id="factory-buy">Buy</button>
+                                class="fas fa-cubes"></i>-
+                            <button type="button" class="btn btn-primary center buy buy-inactive"
+                                id="factory-buy">Buy</button></p>
+
                     </div>
                     <div class="col-6 shop-item">
                         <p class="center buy-text buy-text2">
                             Each Click x<span id="click-power-next">3</span><br>-&nbsp;<span
-                                id="clicking-power-cost">100</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-</p>
-                        <button type="button" class="btn btn-primary center buy buy-inactive"
-                            id="click-power-buy">Buy</button>
+                                id="clicking-power-cost">100</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-
+                            <button type="button" class="btn btn-primary center buy buy-inactive"
+                                id="click-power-buy">Buy</button></p>
+
                     </div>
                     <div class="col-6 shop-item">
                         <p class="center buy-text buy-text2">
                             Stuff <span class="d-none d-sm-inline">Investment</span> Bank <i
                                 class="fas fa-university"></i><br>-&nbsp;<span id="bank-cost">1000</span> Stuff&nbsp;<i
-                                class="fas fa-cubes"></i>-</p>
-                        <button type="button" class="btn btn-primary center buy buy-inactive" id="bank-buy">Buy</button>
+                                class="fas fa-cubes"></i>-
+                            <button type="button" class="btn btn-primary center buy buy-inactive"
+                                id="bank-buy">Buy</button></p>
                     </div>
-
                 </div>
             </div>
             <div class="row no-gutters">
@@ -137,17 +151,16 @@
                 </div>
                 <div class="d-none d-xl-block col-xl-1"></div>
                 <div class="col-12 col-xl-3 shop-item">
-                    <div class="row">
-                        <div class="col-8 col-md-12 buy-text3">
-                            <p class="center buy-text buy-text2">
-                                Victory! <i class="fas fa-trophy"></i><br>-&nbsp;1 Billion Stuff&nbsp;<i
-                                    class="fas fa-cubes"></i>-</p>
+                        <div class="buy-text3">
+                            <div class="buy-text">
+                            <p class="center buy-text2 d-inline-block">
+                                Victory! <i class="fas fa-trophy"></i><br class="d-none d-md-inline">-&nbsp;1 Billion Stuff&nbsp;<i
+                                    class="fas fa-cubes"></i>-&nbsp;&nbsp;</p><button type="button" class="btn btn-primary center buy buy-inactive d-inline-block d-md-block"
+                                    id="victory-buy">Buy</button>
+                                </div>
                         </div>
-                        <div class="col-4 col-md-12 v-buy-container">
-                            <div class="v-buy"><button type="button" class="btn btn-primary center buy buy-inactive"
-                                    id="victory-buy">Buy</button></div>
                         </div>
-                    </div>
+                
                 </div>
             </div>
             <div class="row no-gutters attract-message-container">
@@ -155,8 +168,6 @@
                     <p>Want to suggest a new feature? &nbsp;&nbsp; <i class="fas fa-arrow-down"></i></p>
                 </div>
             </div>
-        </div>
-
     </section>
     <section class="page-2">
         <div class="row no-gutters">

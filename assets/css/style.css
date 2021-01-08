@@ -302,8 +302,10 @@ a:focus {
         color: black;
     }
     .buy-text{
-        width: 70%;
+        width: fit-content;
         margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .shop-item p {
         font-size: 1.2rem;
