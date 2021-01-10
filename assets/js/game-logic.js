@@ -8,8 +8,9 @@ var START_VALUES = {
     clickingPowerNext: 3,
     stuffGetters: 0,
     factories: 0,
-    banks: 0
-}
+    banks: 0,
+    stuffPerSecond: 0
+};
 
 var COST_MAP = {
     getter: 15,
@@ -39,6 +40,7 @@ $(document).ready(function () {
     var clickingPower = START_VALUES.clickingPower;
     var clickingPowerCost = COST_MAP.clickingPower;
     var clickingPowerNext = START_VALUES.clickingPowerNext;
+  	var stuffPerSecond = START_VALUES.stuffPerSecond;
 
     //Shop Items and Costs
 
@@ -142,16 +144,16 @@ $(document).ready(function () {
 
     function saveGame() {
         var gameSave = {
-            score,
-            clickingPower,
-            clickingPowerCost,
-            clickingPowerNext,
-            stuffGetterCost,
-            stuffGetters,
-            factoryCost,
-            factories,
-            bankCost,
-            banks
+          score: score,
+          clickingPower: clickingPower,
+          clickingPowerCost: clickingPowerCost,
+          clickingPowerNext: clickingPowerNext,
+          stuffGetterCost: stuffGetterCost,
+          stuffGetters: stuffGetters,
+          factoryCost: factoryCost,
+          factories: factories,
+          bankCost: bankCost,
+          banks: banks
         };
         localStorage.setItem("gameSave", JSON.stringify(gameSave));
     }
@@ -175,7 +177,7 @@ $(document).ready(function () {
             event.preventDefault();
             saveGame();
         }
-    })
+    });
 
     function resetGame() {
         if (confirm("Are you sure you want to reset your game?")) {
@@ -187,7 +189,7 @@ $(document).ready(function () {
 
     setInterval(function(){
         saveGame();
-    }, 3000)
+    }, 3000);
     
     setInterval(function () { 
         
@@ -231,8 +233,8 @@ $(document).ready(function () {
             $("#victory-buy").addClass("buy-inactive");
         }
 
-        document.title = score + " Stuff - Stuff Getter"
-    }, 1000) //1000ms = 1 second
+        document.title = score + " Stuff - Stuff Getter";
+    }, 1000); //1000ms = 1 second
 
     //Click Event Handlers for Game
 
@@ -244,4 +246,4 @@ $(document).ready(function () {
     $("#reset").click(resetGame);
     $("#click-power-buy").click(buyClickingPower);
     $("#victory-buy").click(buyGameVictory);
-})
+});

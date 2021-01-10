@@ -125,10 +125,96 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
-
+-->
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+I have run my site though these [HTML](https://validator.w3.org/#validate_by_uri), [CSS](https://jigsaw.w3.org/css-validator/), and [Javascript](https://jshint.com/) validators and it has passed all.
+
+Below are the steps that a user would need to take in order to run through the user stories outlined previously. Screen shots are included for each step.
+
+### User Story 1 (someone new to the game’s genre)
+
+1. Inspect instructions.
+1. Click “Get stuff” for a while
+1. Spend stuff on all shop items.
+1. Automatically receive stuff for a while. 
+    1. Optionally, continue playing until accruing over a billion stuff.
+    1. Buy the final victory item.
+
+Step 1:
+
+![Game Instructions Screenshot](/../assets/images/testing/instructions.png)
+
+Step 2:
+
+![Playing Game Screenshot](/../assets/images/testing/played.png)
+
+Step 3 (all shop items bought):
+
+![Getter Bought Screenshot](/../assets/images/testing/bought-getter.png)
+
+![Factory Bought Screenshot](/../assets/images/testing/bought-factory.png)
+
+![Bank Bought Screenshot](/../assets/images/testing/bought-bank.png)
+
+![Multiplier Bought Screenshot](/../assets/images/testing/bought-multiplier.png)
+
+Step 4.1/2
+
+![Victory Bought Screenshot](/../assets/images/testing/victory.png)
+
+### User Story 2 (someone not new to the genre)
+Steps are as above, except, User 2 is unlikely to need to read the instructions.
+
+### User Story 3 (Developer)
+
+1. Complete steps 1-4 from User Story 1,
+1. Scroll down to contact form.
+1. Fill in the contact form and press “submit”.
+1. Verify that the success message appears.
+1. Click on the social media links, and verify that they open in another browser window.
+
+Step 2:
+
+![Contact form screenshot](/../assets/images/testing/form.png)
+
+Step 3:
+
+![Filled form Screenshot](/../assets/images/testing/filled-form.png)
+
+Step 4:
+
+![Email sent Screenshot](/../assets/images/testing/form-success.png)
+
+Step 5:
+
+![GitHub Screenshot](/../assets/images/testing/github.png)
+
+![Linkedin Screenshot](/../assets/images/testing/linkedin.png)
+
+![Twitter Screenshot](/../assets/images/testing/twitter.png)
+
+### Responsive Layout Testing
+
+Below are images of my site on a variety of common devices, to demonstrate its responsive design:
+
+![Desktop Screenshot](/../assets/images/testing/desktop.png)
+
+![Phone 1 Screenshot](/../assets/images/testing/phone.png)
+
+![Phone 2 Screenshot](/../assets/images/testing/phone2.png)
+
+![Ipad Screenshot](/../assets/images/testing/ipad.png)
+
+![Ipad Pro Screenshot](/../assets/images/testing/ipadpro.png)
+
+### Browser Testing
+
+I have recorded videos of myself testing the project across all the major browsers, available on Windows, [here](https://drive.google.com/drive/folders/1r7CLiZb6ucip8Xx9JeeDGuRnenri0thK?usp=sharing).
+
+### Chrome lighthouse report:
+
+<!--In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 
@@ -186,6 +272,8 @@ $(".get-stuff").click(addToScore);
     right: 0;
 }
 ```
+
+* Bug discovered where save functionality does not work on Firefox or Opera browsers. 
 
 <!--
 
