@@ -112,25 +112,25 @@ Below are the steps that a user would need to take in order to run through the u
 
 Step 1:
 
-![Game Instructions Screenshot](/../assets/images/testing/instructions.png)
+![Game Instructions Screenshot](/assets/images/testing/instructions.png)
 
 Step 2:
 
-![Playing Game Screenshot](/../assets/images/testing/played.png)
+![Playing Game Screenshot](/assets/images/testing/played.png)
 
 Step 3 (all shop items bought):
 
-![Getter Bought Screenshot](/../assets/images/testing/bought-getter.png)
+![Getter Bought Screenshot](/assets/images/testing/bought-getter.png)
 
-![Factory Bought Screenshot](/../assets/images/testing/bought-factory.png)
+![Factory Bought Screenshot](/assets/images/testing/bought-factory.png)
 
-![Bank Bought Screenshot](/../assets/images/testing/bought-bank.png)
+![Bank Bought Screenshot](/assets/images/testing/bought-bank.png)
 
-![Multiplier Bought Screenshot](/../assets/images/testing/bought-multiplier.png)
+![Multiplier Bought Screenshot](/assets/images/testing/bought-multiplier.png)
 
 Step 4.1/2
 
-![Victory Bought Screenshot](/../assets/images/testing/victory.png)
+![Victory Bought Screenshot](/assets/images/testing/victory.png)
 
 ### User Story 2 (someone not new to the genre)
 Steps are as above, except, User 2 is unlikely to need to read the instructions.
@@ -145,21 +145,21 @@ Steps are as above, except, User 2 is unlikely to need to read the instructions.
 
 Step 2:
 
-![Contact form screenshot](/../assets/images/testing/form.png)
+![Contact form screenshot](/assets/images/testing/form.png)
 
 Step 3:
 
-![Filled form Screenshot](/../assets/images/testing/filled-form.png)
+![Filled form Screenshot](/assets/images/testing/filled-form.png)
 
 Step 4:
 
-![Email sent Screenshot](/../assets/images/testing/form-success.png)
+![Email sent Screenshot](/assets/images/testing/form-success.png)
 
 Step 5:
 
-![GitHub Screenshot](/../assets/images/testing/github.png)
+![GitHub Screenshot](/assets/images/testing/github.png)
 
-![Linkedin Screenshot](/../assets/images/testing/linkedin.png)
+![Linkedin Screenshot](/assets/images/testing/linkedin.png)
 
 ![Twitter Screenshot](/../assets/images/testing/twitter.png)
 
@@ -167,15 +167,15 @@ Step 5:
 
 Below are images of my site on a variety of common devices, to demonstrate its responsive design:
 
-![Desktop Screenshot](/../assets/images/testing/desktop.png)
+![Desktop Screenshot](/assets/images/testing/desktop.png)
 
-![Phone 1 Screenshot](/../assets/images/testing/phone.png)
+![Phone 1 Screenshot](/assets/images/testing/phone.png)
 
-![Phone 2 Screenshot](/../assets/images/testing/phone2.png)
+![Phone 2 Screenshot](/assets/images/testing/phone2.png)
 
-![Ipad Screenshot](/../assets/images/testing/ipad.png)
+![Ipad Screenshot](/assets/images/testing/ipad.png)
 
-![Ipad Pro Screenshot](/../assets/images/testing/ipadpro.png)
+![Ipad Pro Screenshot](/assets/images/testing/ipadpro.png)
 
 ### Browser Testing
 
@@ -183,7 +183,7 @@ I have recorded videos of myself testing the project across all the major browse
 
 ### Chrome lighthouse report:
 
-![Lighthouse test screenshot](/../assets/images/testing/lighthouse-test.png)
+![Lighthouse test screenshot](/assets/images/testing/lighthouse-test.png)
 
 ## Bugs
 
