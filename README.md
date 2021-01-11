@@ -1,6 +1,6 @@
 # Stuff Getter
 
-This [project](https://github.com/dudeguythethird/clicker-game) is a simple clicker/ incremental game (in the style of *Cookie Clicker* or *Tap Tycoon*). Its main aim is to provide a fun experience of interactive growth for the player. It must achieve this with only HTML, CSS, and Javascript (JQuery). 
+This [project](https://dudeguythethird.github.io/clicker-game/) is a simple clicker/ incremental game (in the style of *Cookie Clicker* or *Tap Tycoon*). Its main aim is to provide a fun experience of interactive growth for the player. It must achieve this with only HTML, CSS, and Javascript (JQuery). 
 
 A clicker/ incremental game is a genre in which, initially, the only avenue for interactivity offered to the player is to simply click, either a button or anywhere on the screen. Doing this accrues a resource. Different iterations of the genre choose different resources, usually for thematic reasons. *Adventure Capitalist* has dollars, *Adventure Communist* has potatoes, *Cookie Clicker* has… well... cookies. The conceit of these games is their simplicity, which almost always builds into ludicrous levels of complexity. As the games go on, they offer the player various items that they can buy with their accrued resources. These, usually, will allow the gathering of further resources. The amount of resources the player has will increase exponentially. 
 
@@ -39,13 +39,6 @@ Final design differs slightly from what is shown below:
 
 ![Desktop formatted wireframe](/assets/wireframes/desktop-wireframe.png)
 
-<!--Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in a separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.--->
-
 ## Features
 
 My site only features one page, that is split into two distinct sections, each the height of the view port. This effectively creates 2 pseudo-pages: the game and the contact form. The exact features of each are discussed below:
@@ -83,21 +76,6 @@ These features work in tandem with one another to create a sense of progression 
 * More buildings/ items.
 * Better art and animations.
 
-<!---
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### Features Left to Implement
-- Another feature idea --->
-
 ## Technologies Used
 
 * HTML5
@@ -117,15 +95,6 @@ In addition, you may also use this section to discuss plans for additional featu
 * [EmailJS](https://www.emailjs.com/)  
     * Provides an easy to implement back end for email sending. 
 
-
-
-<!---
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
--->
 ## Testing
 
 I have run my site though these [HTML](https://validator.w3.org/#validate_by_uri), [CSS](https://jigsaw.w3.org/css-validator/), and [Javascript](https://jshint.com/) validators and it has passed all.
@@ -214,23 +183,9 @@ I have recorded videos of myself testing the project across all the major browse
 
 ### Chrome lighthouse report:
 
-<!--In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+![Lighthouse test screenshot](/../assets/images/testing/lighthouse-test.png)
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
--->
-
-### Bugs
+## Bugs
 
 * Bug discovered where the number of factories the player had acquired were not loading from cookies. I eventually realised that this was because I had omitted to add a line of code to get that value to save in the first place. Bug fixed by adding the required lines (both to the saveGame and loadGame functions):
 ```Javascript
@@ -275,12 +230,6 @@ $(".get-stuff").click(addToScore);
 
 * Bug discovered where save functionality does not work on Firefox or Opera browsers. 
 
-<!--
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here. -->
-
 ## Deployment
 
 This project is deployed on GitHub pages. I deployed it by:
@@ -315,32 +264,31 @@ Want to make some changes to this project and develop on your own version?
 1. Navigate to the folder you would like to clone the code in.
 1. Type “git clone ” then paste the URL you copied in step 3.
 1. Press enter!
-<!---
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
---->
-
 
 ## Credits
 
 * [This](https://stackoverflow.com/questions/2170923/whats-the-easiest-way-to-call-a-function-every-5-seconds-in-jquery) thread helped me understand how I could automatcally update classes on my buy buttons.
 
-<!---
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+* [This](https://www.youtube.com/watch?v=d-AbDEwpp6g&t=1161s&ab_channel=TanktotGames) youtube tutorial provided the basis of the JavaScript code for this project. I have adapted and altered much of it to suit my needs. For example, I am using jQuery and the tutorial is not. Additionally, I have altered the addToScore function, added a buyClickingPower function, added a buyGameVictory function, stored key values in value maps at the beggining of the code for easy maintainability, and included .click event handlers in this JS file (the tutorial shows JS included in between script tags in the main HTML file and uses onclick attributes for the relevant elements in said HTML).
 
---->
+* Standard column layouts from bootstraps documentation, deployed in a variety ways on the site:https://getbootstrap.com/docs/4.5/layout/grid/#auto-layout-columns
+
+* This method makes certain content invisible on certain screen sizes and came straight from bootstrap’s documentation: https://getbootstrap.com/docs/4.5/utilities/display/
+
+* Bootstrap button classes used for all the buttons in the game: https://getbootstrap.com/docs/4.5/components/buttons/
+
+* Standard Bootstrap modal used for "How To Play" section: https://getbootstrap.com/docs/5.0/components/modal/
+
+
+### Content
+
+* All text content is original.
+
 ### Media
 
 - [The background image](https://www.freepik.com/vectors/background), from kjpargeter.
 
 ### Acknowledgements
 
-- I received inspiration for this project from X -->
+* The method used to produce a functioning email contact form was learnt on Code Institute's web development course, as were various styling methods. 
 
