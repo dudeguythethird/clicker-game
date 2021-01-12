@@ -293,8 +293,8 @@ Want to make some changes to this project and develop on your own version?
 ### Media
 
 - [The background image](https://www.freepik.com/vectors/background), from kjpargeter.
+- The favicon for this site is a fontawesome icon I converted to ICO format. It is licensed under creative commons: https://fontawesome.com/license
 
 ### Acknowledgements
 
 * The method used to produce a functioning email contact form was learnt on Code Institute's web development course, as were various styling methods. 
-
