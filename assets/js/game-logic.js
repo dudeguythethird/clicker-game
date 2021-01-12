@@ -158,19 +158,19 @@ $(document).ready(function () {
         localStorage.setItem("gameSave", JSON.stringify(gameSave));
     }
 
-    window.onload = function () {
-        loadGame();
-        updateStuffPerSecond();
-        $("#total-stuff-amount").text(score);
-        $("#auto-cost").text(stuffGetterCost);
-        $("#stuff-getter-value").text(stuffGetters);
-        $("#click-power-next").text(clickingPowerNext);
-        $("#clicking-power-cost").text(clickingPowerCost);
-        $("#factory-cost").text(factoryCost);
-        $("#factory-value").text(factories);
-        $("#bank-cost").text(bankCost);
-        $("#bank-value").text(banks);
-    };
+    
+    loadGame();
+    updateStuffPerSecond();
+    $("#total-stuff-amount").text(score);
+    $("#auto-cost").text(stuffGetterCost);
+    $("#stuff-getter-value").text(stuffGetters);
+    $("#click-power-next").text(clickingPowerNext);
+    $("#clicking-power-cost").text(clickingPowerCost);
+    $("#factory-cost").text(factoryCost);
+    $("#factory-value").text(factories);
+    $("#bank-cost").text(bankCost);
+    $("#bank-value").text(banks);
+    
 
     document.addEventListener("keydown", function (event) {
         if (event.ctrlKey && event.which == 83) { //"83" is a code that refers to the key "s", the codes says if the the keys "ctrl + s" are pressed.
