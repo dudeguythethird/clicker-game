@@ -99,7 +99,7 @@ These features work in tandem with one another to create a sense of progression 
 
 I have run my site though these [HTML](https://validator.w3.org/#validate_by_uri), [CSS](https://jigsaw.w3.org/css-validator/), and [Javascript](https://jshint.com/) validators and it has passed all.
 
-Below are the steps that a user would need to take in order to run through the user stories outlined previously. Screen shots are included for each step.
+Below are the steps that a user would need to take in order to run through the user stories outlined previously. Screen shots are included for each step. Each step is illustrated with a screen shot below. The screenshots show an old version of the layout but the functionality that they illustrate has not been changed.
 
 ### User Story 1 (someone new to the game’s genre)
 
@@ -179,7 +179,7 @@ Below are images of my site on a variety of common devices, to demonstrate its r
 
 ### Browser Testing
 
-I have recorded videos of myself testing the project across all the major browsers, available on Windows, [here](https://drive.google.com/drive/folders/1r7CLiZb6ucip8Xx9JeeDGuRnenri0thK?usp=sharing).
+I have recorded videos of myself testing the project across all the major browsers, available on Windows, [here](https://drive.google.com/drive/folders/1r7CLiZb6ucip8Xx9JeeDGuRnenri0thK?usp=sharing). The videos have the same earlier layour as the screenshots above, again though, the functionality they show has not changed.
 
 ### Chrome lighthouse report:
 
@@ -212,20 +212,6 @@ $(".get-stuff").click(addToScore());
 * This didn't work, it turned out, because this is not how you are meant to call a function in JQuery, you do not need the brackets after the function's name, if you are not passing in any values. Now, my .click functions all look like:
 ```Javascript
 $(".get-stuff").click(addToScore);
-```
-* I had some difficulty getting the footer to stick to the bottom of the page. Normally, I would use one of [these](https://css-tricks.com/couple-takes-sticky-footer/) methods. However, my site also has a design that ties the height of it's content to the height of the device's view port. In essence, it mimics having multiple pages on only one page, by having 2 sections both with height= viewport height, with content on them dynamically reformatting to accommodate the relevant screen. This means that any method that involves setting the height of the main content of the page to some amount other than viewport height would defeat the objective of this design. Luckily, this design choice also opened up a simple solution to the sticky footer conundrum: putting the footer within the second <section> and, making it's position absolute, it's containers relative, and it's bottom, left, and right 0:
-
-```CSS
-.page-2 {
-    position: relative;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 ```
 
 * Bug discovered during testing, where save functionality does not work on Firefox or Opera browsers. Eventually I was able to fix it with the help of [this](https://stackoverflow.com/questions/15746450/window-onload-function-doesnt-work-on-mozilla-firefox). Essentially, the problem was that I already had my whole javascript code wrapped in a document.ready function, so the window.onload function that I wrapped my load game functions in was redundant. The code now just looks like this:
