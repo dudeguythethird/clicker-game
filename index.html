@@ -1,210 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d12ce022da.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="assets/cubes-solid.ico">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Stuff Getter</title>
-</head>
-
-<body>
-    <header>
-        <h3 class="title">Stuff Getter <span class="d-none d-md-inline">- a stuff getting game.</span></h3>
-        <!--- Below is a standard modal from Bootstrap's documentation, customised with css. https://getbootstrap.com/docs/5.0/components/modal/-->
-        <button type="button" class="btn btn-primary how-to" data-bs-toggle="modal" data-bs-target="#exampleModal">How
-            to play</button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+         crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/d12ce022da.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"
+         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <link rel="shortcut icon" href="assets/cubes-solid.ico">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <title>Stuff Getter</title>
+   </head>
+   <body>
+      <header>
+         <h3 class="title">Stuff Getter <span class="d-none d-md-inline">- a stuff getting game.</span></h3>
+         <!--- Below is a standard modal from Bootstrap's documentation, customised with css. https://getbootstrap.com/docs/5.0/components/modal/-->
+         <button type="button" class="btn btn-primary how-to" data-bs-toggle="modal" data-bs-target="#exampleModal">How
+         to play</button>
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">How to Play</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Hi, welcome to Stuff Getter. As the name suggests, this is a game about getting stuff.
-                            To get started, all you need to do is click, or tap, "Get Stuff". The more you click the
-                            more you get and your total stuff will be recorded in the "Total Stuff" box, above the
-                            "Get Stuff" button. What's the point of getting stuff you may be wondering? Well, to
-                            spend that stuff on items of course!
-                        </p>
-                        <p>
-                            As you can probably see, there is a spend stuff section. There, you can spend your hard
-                            earned stuff on new and exciting stuff getting technologies. You get stuff to spend it
-                            on items that enable you to get even more stuff. You will notice that the more of an
-                            item you buy, the more expensive it becomes. How much stuff can you get?
-                            Try to get a billion stuff and buy your way to victory! (I have not done maths on how
-                            long this might take to achieve. It could be a very long time...) Don't worry about
-                            achieving this goal too much, all you need to do is get stuff and enjoy watching the
-                            numbers go up. You can leave the game running in your browser while you do other things,
-                            passively earning you stuff.
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">How to Play</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <p>
+                        Hi, welcome to Stuff Getter. As the name suggests, this is a game about getting stuff.
+                        To get started, all you need to do is click, or tap, "Get Stuff". The more you click the
+                        more you get and your total stuff will be recorded in the "Total Stuff" box, above the
+                        "Get Stuff" button. What's the point of getting stuff you may be wondering? Well, to
+                        spend that stuff on items of course!
+                     </p>
+                     <p>
+                        As you can probably see, there is a spend stuff section. There, you can spend your hard
+                        earned stuff on new and exciting stuff getting technologies. You get stuff to spend it
+                        on items that enable you to get even more stuff. You will notice that the more of an
+                        item you buy, the more expensive it becomes. How much stuff can you get?
+                        Try to get a billion stuff and buy your way to victory! (I have not done maths on how
+                        long this might take to achieve. It could be a very long time...) Don't worry about
+                        achieving this goal too much, all you need to do is get stuff and enjoy watching the
+                        numbers go up. You can leave the game running in your browser while you do other things,
+                        passively earning you stuff.
+                     </p>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+               </div>
             </div>
-        </div>
-    </header>
-    <!---Html is split into 2 sections, one for each "page", the game is one the first, the contact form on the second. The first is styled so its height is always the same as your screen height, minimum.-->
-    <section class="page-1">
-        <div class="row no-gutters">
+         </div>
+      </header>
+      <!---Html is split into 2 sections, one for each "page", the game is one the first, the contact form on the second. The first is styled so its height is always the same as your screen height, minimum.-->
+      <section class="page-1">
+         <div class="row no-gutters">
             <div class="col-12 col-xl-6 on-screens">
-                <h2 class="your-stuff-title">Your Stuff&nbsp;&nbsp; <i class="fas fa-arrow-down"></i></h2>
-                <div class="row no-gutters">
-                    <div class="col-6">
-                        <p class="sps">Stuff per second = <span id="sps-value">0</span></p>
-                    </div>
-                    <div class="col-6">
-                        <p class="sps">Stuff Getters = <span id="stuff-getter-value">0</span></p>
-                    </div>
-                    <div class="col-6">
-                        <p class="sps">Factories = <span id="factory-value">0</span></p>
-                    </div>
-                    <div class="col-6">
-                        <p class="sps">Banks = <span id="bank-value">0</span></p>
-                    </div>
-                    <button type="button" class="btn btn-primary center save" id="save">Save</button>
-                    <button type="button" class="btn btn-primary center save" id="reset">Reset</button>
-                </div>
-                <div class="row no-gutters">
-                    <div class="center total-stuff-div">
-                        <span class="total-stuff-text">Total Stuff&nbsp;&nbsp;<i class="fas fa-cubes"></i>&nbsp;=</span>
-                        <span id="total-stuff-amount">0</span>
-                    </div>
-                </div>
-                <div class="col-12 get-stuff-container"><button type="button" class="btn btn-primary get-stuff">Get
-                        Stuff <i class="fas fa-cubes"></i></button>
-                </div>
+               <h2 class="your-stuff-title">Your Stuff&nbsp;&nbsp; <i class="fas fa-arrow-down"></i></h2>
+               <div class="row no-gutters">
+                  <div class="col-6">
+                     <p class="sps">Stuff per second = <span id="sps-value">0</span></p>
+                  </div>
+                  <div class="col-6">
+                     <p class="sps">Stuff Getters = <span id="stuff-getter-value">0</span></p>
+                  </div>
+                  <div class="col-6">
+                     <p class="sps">Factories = <span id="factory-value">0</span></p>
+                  </div>
+                  <div class="col-6">
+                     <p class="sps">Banks = <span id="bank-value">0</span></p>
+                  </div>
+                  <button type="button" class="btn btn-primary center save" id="save">Save</button>
+                  <button type="button" class="btn btn-primary center save" id="reset">Reset</button>
+               </div>
+               <div class="row no-gutters">
+                  <div class="center total-stuff-div">
+                     <span class="total-stuff-text">Total Stuff&nbsp;&nbsp;<i class="fas fa-cubes"></i>&nbsp;=</span>
+                     <span id="total-stuff-amount">0</span>
+                  </div>
+               </div>
+               <div class="col-12 get-stuff-container"><button type="button" class="btn btn-primary get-stuff">Get
+                  Stuff <i class="fas fa-cubes"></i></button>
+               </div>
             </div>
             <div class="col-12 col-xl-6 on-screens-1">
-                <div class="row no-gutters shop-title-container">
-                    <div class="col-12 shop-title">
-                        <h2>Spend Stuff&nbsp;&nbsp; <i class="fas fa-arrow-down"></i></h2>
-                    </div>
-                </div>
-                <div class="row no-gutters shop-item-container">
-                    <div class="col-6 shop-item">
-                        <p class="center buy-text">Auto Stuff Getter <i class="fas fa-magic"></i><br>-&nbsp;<span
-                                id="auto-cost">15</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-<button type="button"
-                                class="btn btn-primary center buy buy-inactive" id="auto-buy">Buy</button></p>
-                    </div>
-                    <div class="col-6 shop-item">
-                        <p class="center buy-text">
-                            Stuff <span class="d-none d-sm-inline">Creating</span> Factory <i
-                                class="fas fa-industry"></i><br>-&nbsp;<span id="factory-cost">100</span> Stuff&nbsp;<i
-                                class="fas fa-cubes"></i>-
-                            <button type="button" class="btn btn-primary center buy buy-inactive"
-                                id="factory-buy">Buy</button>
-                        </p>
-                    </div>
-                    <div class="col-6 shop-item">
-                        <p class="center buy-text">
-                            Each Click x<span id="click-power-next">3</span><br>-&nbsp;<span
-                                id="clicking-power-cost">100</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-
-                            <button type="button" class="btn btn-primary center buy buy-inactive"
-                                id="click-power-buy">Buy</button>
-                        </p>
-                    </div>
-                    <div class="col-6 shop-item">
-                        <p class="center buy-text">
-                            Stuff <span class="d-none d-sm-inline">Investment</span> Bank <i
-                                class="fas fa-university"></i><br>-&nbsp;<span id="bank-cost">1000</span> Stuff&nbsp;<i
-                                class="fas fa-cubes"></i>-
-                            <button type="button" class="btn btn-primary center buy buy-inactive"
-                                id="bank-buy">Buy</button>
-                        </p>
-                    </div>
-                    <div class="col-9 col-sm-6 shop-item">
-                        <p class="center buy-text">
-                            Victory! <i class="fas fa-trophy"></i><br class="d-none d-md-inline">-&nbsp;1 Billion
-                            Stuff&nbsp;<i class="fas fa-cubes"></i>-&nbsp;&nbsp;
-                            <button type="button"
-                                class="btn btn-primary center buy buy-inactive d-inline-block d-md-block"
-                                id="victory-buy">Buy</button>
-                        </p>
-
-                    </div>
-                </div>
+               <div class="row no-gutters shop-title-container">
+                  <div class="col-12 shop-title">
+                     <h2>Spend Stuff&nbsp;&nbsp; <i class="fas fa-arrow-down"></i></h2>
+                  </div>
+               </div>
+               <div class="row no-gutters shop-item-container">
+                  <div class="col-6 shop-item">
+                     <p class="center buy-text">Auto Stuff Getter <i class="fas fa-magic"></i><br>-&nbsp;<span
+                        id="auto-cost">15</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-<button type="button"
+                        class="btn btn-primary center buy buy-inactive" id="auto-buy">Buy</button></p>
+                  </div>
+                  <div class="col-6 shop-item">
+                     <p class="center buy-text">
+                        Stuff <span class="d-none d-sm-inline">Creating</span> Factory <i
+                           class="fas fa-industry"></i><br>-&nbsp;<span id="factory-cost">100</span> Stuff&nbsp;<i
+                           class="fas fa-cubes"></i>-
+                        <button type="button" class="btn btn-primary center buy buy-inactive"
+                           id="factory-buy">Buy</button>
+                     </p>
+                  </div>
+                  <div class="col-6 shop-item">
+                     <p class="center buy-text">
+                        Each Click x<span id="click-power-next">3</span><br>-&nbsp;<span
+                           id="clicking-power-cost">100</span> Stuff&nbsp;<i class="fas fa-cubes"></i>-
+                        <button type="button" class="btn btn-primary center buy buy-inactive"
+                           id="click-power-buy">Buy</button>
+                     </p>
+                  </div>
+                  <div class="col-6 shop-item">
+                     <p class="center buy-text">
+                        Stuff <span class="d-none d-sm-inline">Investment</span> Bank <i
+                           class="fas fa-university"></i><br>-&nbsp;<span id="bank-cost">1000</span> Stuff&nbsp;<i
+                           class="fas fa-cubes"></i>-
+                        <button type="button" class="btn btn-primary center buy buy-inactive"
+                           id="bank-buy">Buy</button>
+                     </p>
+                  </div>
+                  <div class="col-9 col-sm-6 shop-item">
+                     <p class="center buy-text">
+                        Victory! <i class="fas fa-trophy"></i><br class="d-none d-md-inline">-&nbsp;1 Billion
+                        Stuff&nbsp;<i class="fas fa-cubes"></i>-&nbsp;&nbsp;
+                        <button type="button"
+                           class="btn btn-primary center buy buy-inactive d-inline-block d-md-block"
+                           id="victory-buy">Buy</button>
+                     </p>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="row no-gutters attract-message-container d-none d-sm-block">
+         </div>
+         <div class="row no-gutters attract-message-container d-none d-sm-block">
             <div class="attract-message">
-                Want to suggest a new feature? &nbsp;&nbsp; <button type="button" class="link btn-link d-inline"
-                    id="scroll"><i class="fas fa-arrow-down"></i></button>
+               Want to suggest a new feature? &nbsp;&nbsp; <button type="button" class="link btn-link d-inline"
+                  id="scroll"><i class="fas fa-arrow-down"></i></button>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="row no-gutters">
+         </div>
+      </section>
+      <section>
+         <div class="row no-gutters">
             <div class="col-1 col-sm-2"></div>
             <div class="col-10 col-sm-8">
-                <!--Basic outline of form taken from code institute lesson on the subject-->
-                <div class="form">
-                    <h3 class="contact-heading uppercase text-center">
-                        Got an idea in mind?
-                    </h3>
-                    <h5 class="text-center form-element">Tell me about it:</h5>
-                    <div class="center-form">
-                        <form onsubmit="return sendMail(this);">
-                            <input type="text" name="name" id="fullname" class="form-control form-element"
-                                placeholder="Name" required />
-                            <input type="email" name="emailaddress" id="emailaddress" class="form-control form-element"
-                                placeholder="Email" required />
-                            <textarea rows="5" name="ideasuggestion" id="ideasuggestion"
-                                class="form-control form-element" placeholder="Describe your idea..."
-                                required></textarea>
-                            <div class="form-row text-center">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary form-element">
-                                        Send Idea Suggestion
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+               <!--Basic outline of form taken from code institute lesson on the subject-->
+               <div class="form">
+                  <h3 class="contact-heading uppercase text-center">
+                     Got an idea in mind?
+                  </h3>
+                  <h5 class="text-center form-element">Tell me about it:</h5>
+                  <div class="center-form">
+                     <form onsubmit="return sendMail(this);">
+                        <input type="text" name="name" id="fullname" class="form-control form-element"
+                           placeholder="Name" required />
+                        <input type="email" name="emailaddress" id="emailaddress" class="form-control form-element"
+                           placeholder="Email" required />
+                        <textarea rows="5" name="ideasuggestion" id="ideasuggestion"
+                           class="form-control form-element" placeholder="Describe your idea..."
+                           required></textarea>
+                        <div class="form-row text-center">
+                           <div class="col">
+                              <button type="submit" class="btn btn-primary form-element">
+                              Send Idea Suggestion
+                              </button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
             </div>
             <div class="col-1 col-sm-2"></div>
-        </div>
-
-    </section>
-    <footer class="footer">
-        <div class="row nogutters">
+         </div>
+      </section>
+      <footer class="footer">
+         <div class="row nogutters">
             <div class="col-6">
-                <p class="copyright">Copyright<br>Joseph Keable 2020 <i class="far fa-copyright"></i></p>
+               <p class="copyright">Copyright<br>Joseph Keable 2020 <i class="far fa-copyright"></i></p>
             </div>
             <div class="col-6">
-                <p class="socialmedia">
-                    <a href="https://github.com/dudeguythethird" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="https://www.linkedin.com/in/joseph-keable-9738bb149/" target="_blank" rel="noopener"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="https://twitter.com/JosephKeable" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                </p>
+               <p class="socialmedia">
+                  <a href="https://github.com/dudeguythethird" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.linkedin.com/in/joseph-keable-9738bb149/" target="_blank" rel="noopener"><i
+                     class="fab fa-linkedin-in"></i></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://twitter.com/JosephKeable" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+               </p>
             </div>
-        </div>
-    </footer>
-    <script src="assets/js/sendemail.js"></script>
-    <script src="assets/js/game-logic.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("user_ZB9KKIBEJWEtICjpP7gem");
-        })();
-    </script>
-</body>
-
+         </div>
+      </footer>
+      <script src="assets/js/sendemail.js"></script>
+      <script src="assets/js/game-logic.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+      <script type="text/javascript">
+         (function () {
+             emailjs.init("user_ZB9KKIBEJWEtICjpP7gem");
+         })();
+      </script>
+   </body>
 </html>

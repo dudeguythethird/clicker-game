@@ -6,24 +6,23 @@
 /*the following method for positioning my background image was taken from https://www.w3schools.com/html/html_images_background.asp*/
 
 html {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 body {
 	background-image: url(../images/background.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-    background-size: cover;
-    overflow-x: hidden;
+	background-size: cover;
+	overflow-x: hidden;
 }
-
 
 .page-1 {
 	display: flex;
 	align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 5px;
+	justify-content: center;
+	height: 100vh;
+	padding: 5px;
 }
 
 .center {
@@ -51,8 +50,8 @@ body {
 }
 
 .modal-body {
-    max-height: 75vh;
-    overflow: scroll;
+	max-height: 75vh;
+	overflow: scroll;
 }
 
 
@@ -154,8 +153,8 @@ header {
 .attract-message-container {
 	text-align: center;
 	position: absolute;
-    bottom: 0;
-    margin-bottom: 0;
+	bottom: 0;
+	margin-bottom: 0;
 }
 
 .attract-message {
@@ -229,9 +228,9 @@ header {
 }
 
 #scroll {
-    background: none;
-    border: none;
-    color: #F09000;
+	background: none;
+	border: none;
+	color: #F09000;
 }
 
 
@@ -249,8 +248,8 @@ h5 {
 }
 
 .form {
-    margin-top: 7%;
-    padding-bottom: 40px;
+	margin-top: 7%;
+	padding-bottom: 40px;
 }
 
 .form-element {
@@ -327,8 +326,8 @@ a:focus {
 	.buy-text {
 		margin-top: 10px;
 		margin-left: auto;
-        margin-right: auto;
-        width: 80%;
+		margin-right: auto;
+		width: 80%;
 	}
 	.shop-item p {
 		font-size: 1.2rem;
@@ -353,10 +352,10 @@ a:focus {
 		font-size: 1.5rem;
 		margin-bottom: 0;
 		padding: 5px;
-    }
-    .your-stuff-title{
-        margin-top: 30px;
-    }
+	}
+	.your-stuff-title {
+		margin-top: 30px;
+	}
 	.sps {
 		font-size: 1rem;
 		margin: 0;
@@ -425,8 +424,8 @@ a:focus {
 		font-size: 0.8rem;
 	}
 	.your-stuff-title {
-        font-size: 0.9rem;
-        margin-top: 0;
+		font-size: 0.9rem;
+		margin-top: 0;
 	}
 	.get-stuff {
 		font-size: 1rem;
