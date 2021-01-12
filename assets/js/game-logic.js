@@ -27,7 +27,7 @@ var ENTITY_MULTIPLIER = {
 };
 
 var PRICE_SCALING = {
-    getter: 1.5,
+    getter: 1.15,
     factory: 1.2,
     bank: 1.25,
     clickingPower: 3
@@ -58,7 +58,7 @@ $(document).ready(function () {
         if (score >= stuffGetterCost) {
             score = score - stuffGetterCost;
             stuffGetters = stuffGetters + 1;
-            stuffGetterCost = Math.round(stuffGetterCost * 1.15);
+            stuffGetterCost = Math.round(stuffGetterCost * PRICE_SCALING.getter);
             $("#total-stuff-amount").text(score);
             $("#auto-cost").text(stuffGetterCost);
             $("#stuff-getter-value").text(stuffGetters);
@@ -70,7 +70,7 @@ $(document).ready(function () {
         if (score >= factoryCost) {
             score = score - factoryCost;
             factories = factories + 1;
-            factoryCost = Math.round(factoryCost * 1.2);
+            factoryCost = Math.round(factoryCost * PRICE_SCALING.factory);
             $("#total-stuff-amount").text(score);
             $("#factory-cost").text(factoryCost);
             $("#factory-value").text(factories);
@@ -82,7 +82,7 @@ $(document).ready(function () {
         if (score >= bankCost) {
             score = score - bankCost;
             banks = banks + 1;
-            bankCost = Math.round(bankCost * 1.25);
+            bankCost = Math.round(bankCost * PRICE_SCALING.bank);
             $("#total-stuff-amount").text(score);
             $("#bank-cost").text(bankCost);
             $("#bank-value").text(banks);
@@ -158,6 +158,7 @@ $(document).ready(function () {
         localStorage.setItem("gameSave", JSON.stringify(gameSave));
     }
 
+    //The following group of functions load the game by reading the relevant values from the data stored in cookies (when a save game is present)
     
     loadGame();
     updateStuffPerSecond();
@@ -238,6 +239,9 @@ $(document).ready(function () {
 
     //Click Event Handlers for Game
 
+    $("#scroll").click(function(){
+        window.scrollBy(0,2000);
+    });
     $(".get-stuff").click(addToScore);
     $("#auto-buy").click(buyStuffGetter);
     $("#factory-buy").click(buyFactory);

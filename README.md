@@ -228,7 +228,25 @@ $(".get-stuff").click(addToScore);
 }
 ```
 
-* Bug discovered where save functionality does not work on Firefox or Opera browsers. 
+* Bug discovered during testing, where save functionality does not work on Firefox or Opera browsers. Eventually I was able to fix it with the help of [this](https://stackoverflow.com/questions/15746450/window-onload-function-doesnt-work-on-mozilla-firefox). Essentially, the problem was that I already had my whole javascript code wrapped in a document.ready function, so the window.onload function that I wrapped my load game functions in was redundant. The code now just looks like this:
+
+```javascript
+$(document).ready(function () {
+...
+loadGame();
+    updateStuffPerSecond();
+    $("#total-stuff-amount").text(score);
+    $("#auto-cost").text(stuffGetterCost);
+    $("#stuff-getter-value").text(stuffGetters);
+    $("#click-power-next").text(clickingPowerNext);
+    $("#clicking-power-cost").text(clickingPowerCost);
+    $("#factory-cost").text(factoryCost);
+    $("#factory-value").text(factories);
+    $("#bank-cost").text(bankCost);
+    $("#bank-value").text(banks);
+...
+}
+```
 
 ## Deployment
 
