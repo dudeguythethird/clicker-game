@@ -127,20 +127,22 @@ $(document).ready(function () {
 
 	//Save/Load Game Functions
 
-	function loadGame() {
-		var savedGame = JSON.parse(localStorage.getItem("gameSave"));
-		// The following "if" functions check if a given value is stored in the gameSave object, before updating the working value to the one found in said object. This is in order to prevent errors, should it fail to find a value in the gameSave (perhaps due to a change you make to the code)
-		if (typeof savedGame.score !== "undefined") score = savedGame.score;
-		if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
-		if (typeof savedGame.clickingPowerCost !== "undefined") clickingPowerCost = savedGame.clickingPowerCost;
-		if (typeof savedGame.clickingPowerNext !== "undefined") clickingPowerNext = savedGame.clickingPowerNext;
-		if (typeof savedGame.stuffGetterCost !== "undefined") stuffGetterCost = savedGame.stuffGetterCost;
-		if (typeof savedGame.stuffGetters !== "undefined") stuffGetters = savedGame.stuffGetters;
-		if (typeof savedGame.factoryCost !== "undefined") factoryCost = savedGame.factoryCost;
-		if (typeof savedGame.factories !== "undefined") factories = savedGame.factories;
-		if (typeof savedGame.bankCost !== "undefined") bankCost = savedGame.bankCost;
-		if (typeof savedGame.banks !== "undefined") banks = savedGame.banks;
-	}
+    function loadGame() {
+        var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+        // The following "if" functions check if a given value is stored in the gameSave object, before updating the working value to the one found in said object. This is in order to prevent errors, should it fail to find a value in the gameSave (perhaps due to a change you make to the code)
+        if (savedGame != null) {
+            if (typeof savedGame.score !== "undefined") score = savedGame.score;
+            if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
+            if (typeof savedGame.clickingPowerCost !== "undefined") clickingPowerCost = savedGame.clickingPowerCost;
+            if (typeof savedGame.clickingPowerNext !== "undefined") clickingPowerNext = savedGame.clickingPowerNext;
+            if (typeof savedGame.stuffGetterCost !== "undefined") stuffGetterCost = savedGame.stuffGetterCost;
+            if (typeof savedGame.stuffGetters !== "undefined") stuffGetters = savedGame.stuffGetters;
+            if (typeof savedGame.factoryCost !== "undefined") factoryCost = savedGame.factoryCost;
+            if (typeof savedGame.factories !== "undefined") factories = savedGame.factories;
+            if (typeof savedGame.bankCost !== "undefined") bankCost = savedGame.bankCost;
+            if (typeof savedGame.banks !== "undefined") banks = savedGame.banks;
+        }
+    }
 
 	function saveGame() {
 		var gameSave = {
