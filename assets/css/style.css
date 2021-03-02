@@ -49,7 +49,11 @@ body {
 
 .modal-body {
 	max-height: 75vh;
-	overflow: scroll;
+    overflow: scroll;
+}
+
+.modal {
+    padding: 0;
 }
 
 
