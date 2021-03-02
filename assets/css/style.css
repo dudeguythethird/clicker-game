@@ -305,7 +305,8 @@ a:focus {
 	}
 	.get-stuff {
 		width: 30%;
-		margin-top: 20px;
+        margin-top: 25px;
+        margin-bottom: 10px;
 		padding: 10px;
 	}
 	.on-screens {
@@ -320,7 +321,7 @@ a:focus {
 		color: black;
 	}
 	.buy-text {
-		margin-top: 10px;
+		margin-top: 20px;
 		margin-left: auto;
 		margin-right: auto;
 		width: 80%;
