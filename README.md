@@ -163,7 +163,7 @@ Step 5:
 
 ![Linkedin Screenshot](/assets/images/testing/linkedin.png)
 
-![Twitter Screenshot](/../assets/images/testing/twitter.png)
+![Twitter Screenshot](/assets/images/testing/twitter.png)
 
 ### Responsive Layout Testing
 
