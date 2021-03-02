@@ -305,7 +305,7 @@ a:focus {
 	}
 	.get-stuff {
 		width: 30%;
-		margin-top: 7px;
+		margin-top: 20px;
 		padding: 10px;
 	}
 	.on-screens {
@@ -369,15 +369,18 @@ a:focus {
 		color: black;
 	}
 	.total-stuff-div {
-		margin-top: 5px;
+		margin-top: 10px;
 	}
 	.shop-item p {
 		font-size: 0.9rem;
-	}
+    }
+    .get-stuff {
+        margin-top: 20px;
+    }
 	.buy-text {
 		padding: 5px;
 		width: 90%;
-		margin-top: 5px;
+		margin-top: 10px;
 	}
 	.buy {
 		font-size: 1rem;
