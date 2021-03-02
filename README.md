@@ -221,7 +221,7 @@ $(".get-stuff").click(addToScore);
 ```javascript
 $(document).ready(function () {
 ...
-loadGame();
+    loadGame();
     updateStuffPerSecond();
     $("#total-stuff-amount").text(score);
     $("#auto-cost").text(stuffGetterCost);
@@ -235,6 +235,27 @@ loadGame();
 ...
 }
 ```
+
+* Bug discoverd where the loadGame function was not working properly without a gameSave object present in the browser's memory. This meant that the programme was looking for values to update the current values of the programme to, but couldn't find anything without a gameSave object to to pull from. This was fixed by adding a null check to the loadGame function:
+
+```javascript
+function loadGame() {
+        var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+        if (savedGame != null) {
+            if (typeof savedGame.score !== "undefined") score = savedGame.score;
+            if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
+            if (typeof savedGame.clickingPowerCost !== "undefined") clickingPowerCost = savedGame.clickingPowerCost;
+            if (typeof savedGame.clickingPowerNext !== "undefined") clickingPowerNext = savedGame.clickingPowerNext;
+            if (typeof savedGame.stuffGetterCost !== "undefined") stuffGetterCost = savedGame.stuffGetterCost;
+            if (typeof savedGame.stuffGetters !== "undefined") stuffGetters = savedGame.stuffGetters;
+            if (typeof savedGame.factoryCost !== "undefined") factoryCost = savedGame.factoryCost;
+            if (typeof savedGame.factories !== "undefined") factories = savedGame.factories;
+            if (typeof savedGame.bankCost !== "undefined") bankCost = savedGame.bankCost;
+            if (typeof savedGame.banks !== "undefined") banks = savedGame.banks;
+        }
+    }
+```
+
 
 ## Deployment
 
