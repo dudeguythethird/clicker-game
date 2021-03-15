@@ -148,16 +148,6 @@ header {
 
 /*---------------------------------------------1st page (Spend Stuff)*/
 
-.attract-message-container {
-	text-align: center;
-	margin-bottom: 0;
-}
-
-.attract-message {
-	font-family: 'Lato', sans-serif;
-	font-size: 1.2rem;
-}
-
 .your-stuff-title {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 600;
@@ -398,9 +388,6 @@ a:focus {
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
-	.attract-message {
-		font-size: 0.8rem;
-	}
 	/*------------------------------------------Footer*/
 	.socialmedia {
 		font-size: 1.5rem;
@@ -411,9 +398,6 @@ a:focus {
 }
 
 @media(max-width: 350px) {
-	.title {
-		font-size: 0.8rem;
-    }
     .how-to {
         font-size: 0.8rem;
     }
