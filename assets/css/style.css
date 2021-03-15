@@ -49,11 +49,11 @@ body {
 
 .modal-body {
 	max-height: 70vh;
-    overflow: scroll;
+	overflow: scroll;
 }
 
 .modal {
-    padding: 0;
+	padding: 0;
 }
 
 
@@ -295,8 +295,8 @@ a:focus {
 	}
 	.get-stuff {
 		width: 30%;
-        margin-top: 25px;
-        margin-bottom: 10px;
+		margin-top: 25px;
+		margin-bottom: 10px;
 		padding: 10px;
 	}
 	.on-screens {
@@ -364,10 +364,10 @@ a:focus {
 	}
 	.shop-item p {
 		font-size: 0.9rem;
-    }
-    .get-stuff {
-        margin-top: 20px;
-    }
+	}
+	.get-stuff {
+		margin-top: 20px;
+	}
 	.buy-text {
 		padding: 5px;
 		width: 90%;
@@ -398,9 +398,9 @@ a:focus {
 }
 
 @media(max-width: 350px) {
-    .how-to {
-        font-size: 0.8rem;
-    }
+	.how-to {
+		font-size: 0.8rem;
+	}
 	.buy {
 		font-size: 0.9rem;
 	}
